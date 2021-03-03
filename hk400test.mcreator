@@ -1,0 +1,28 @@
+{
+  "id_map": {},
+  "mod_elements": [],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {}
+  },
+  "workspaceSettings": {
+    "modid": "hk400test",
+    "modName": "Henkiller400 Co-Op Test",
+    "version": "1.0.1",
+    "description": "ToDo: add Description",
+    "author": "Carslo45, Henkiller400",
+    "websiteURL": "https://nope-no-web-side-understand.oprts",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.15.2",
+    "credits": "ToDo: add credits",
+    "modElementsPackage": "carslo.hk.mcmod.test",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000547520
+}
