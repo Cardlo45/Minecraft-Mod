@@ -1,10 +1,31 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "NewItem",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "new_item"
+    },
+    {
+      "name": "NewRecipe",
+      "type": "recipe",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "new_recipe"
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.hk400test.new_item": "New Item"
+    }
   },
   "workspaceSettings": {
     "modid": "hk400test",

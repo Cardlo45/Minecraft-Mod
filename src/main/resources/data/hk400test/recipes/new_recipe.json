@@ -1,0 +1,13 @@
+{
+  "group": "hk400test",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hk400test:new_item"
+    }
+  ],
+  "result": {
+    "item": "hk400test:new_item",
+    "count": 1
+  }
+}
