@@ -24,6 +24,7 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "{lore.item.new.item}": "A new Item",
       "item.hk400test.new_item": "New Item"
     }
   },

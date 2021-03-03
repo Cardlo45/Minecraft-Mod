@@ -61,14 +61,9 @@ public class NewItemItem extends Hk400testModElements.ModElement {
 		}
 
 		@Override
-		public boolean canHarvestBlock(BlockState state) {
-			return true;
-		}
-
-		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("a New Item"));
+			list.add(new StringTextComponent("{lore.item.new.item}"));
 		}
 	}
 }

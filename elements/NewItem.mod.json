@@ -18,13 +18,13 @@
     "recipeRemainder": {
       "value": ""
     },
-    "destroyAnyBlock": true,
+    "destroyAnyBlock": false,
     "stayInGridWhenCrafting": true,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "a New Item"
+      "{lore.item.new.item}"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
