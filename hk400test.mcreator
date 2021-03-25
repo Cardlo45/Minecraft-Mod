@@ -187,6 +187,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "creativetab"
+    },
+    {
+      "name": "Hate",
+      "type": "enchantment",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hate"
     }
   ],
   "variable_elements": [],
@@ -202,6 +211,7 @@
       "entity.hk400test.test": "Test",
       "item.hk400test.creativetab": "Creativetab",
       "item.hk400test.new_item": "Lebenspfeil",
+      "enchantment.hk400test.hate": "Hass",
       "advancements.upinthesky.descr": "H�her als je zuvor"
     }
   },
