@@ -187,6 +187,23 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "our_items"
+    },
+    {
+      "name": "CreativetabItemClear",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creativetab_item_clear",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -200,7 +217,7 @@
       "item.hk400test.some_item": "Dornenpfeil",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
-      "item.hk400test.creativetab": "Creativetab",
+      "item.hk400test.creativetab": "Icon",
       "item.hk400test.new_item": "Lebenspfeil",
       "advancements.upinthesky.descr": "H�her als je zuvor"
     }
