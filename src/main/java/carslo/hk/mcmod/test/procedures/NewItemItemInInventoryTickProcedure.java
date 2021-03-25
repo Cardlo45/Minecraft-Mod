@@ -1,5 +1,8 @@
 package carslo.hk.mcmod.test.procedures;
 
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
@@ -22,8 +25,18 @@ public class NewItemItemInInventoryTickProcedure extends Hk400testModElements.Mo
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		LivingEntity livingentity = (LivingEntity) dependencies.get("entity");
-		if ((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() >= 30)) {
-			livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30);
+		if ((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() < 30)) {
+			if (((entity instanceof PlayerEntity)
+					? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Items.REDSTONE, (int) (1)))
+					: false)) {
+				if ((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() >= 30)) {
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(Items.REDSTONE, (int) (1));
+						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					}
+					livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30);
+				}
+			}
 		} else {
 			livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH)
 					.setBaseValue((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() + 0.1));
