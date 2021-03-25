@@ -79,6 +79,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "old_item"
+    },
+    {
+      "name": "OldRecipe",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "old_recipe"
     }
   ],
   "variable_elements": [],

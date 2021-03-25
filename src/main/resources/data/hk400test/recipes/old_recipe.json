@@ -1,0 +1,30 @@
+{
+  "group": "hk400test",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:lime_wool"
+    },
+    "3": {
+      "item": "minecraft:lime_wool"
+    },
+    "4": {
+      "item": "minecraft:emerald_block"
+    },
+    "5": {
+      "item": "minecraft:lime_wool"
+    },
+    "7": {
+      "item": "minecraft:lime_wool"
+    }
+  },
+  "result": {
+    "item": "hk400test:old_item",
+    "count": 1
+  }
+}
