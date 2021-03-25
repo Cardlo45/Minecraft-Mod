@@ -38,15 +38,6 @@
       "registry_name": "upinthesky"
     },
     {
-      "name": "Mcoverhaul",
-      "type": "code",
-      "sortid": 5,
-      "compiles": false,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "mcoverhaul"
-    },
-    {
       "name": "NewItemItemInInventoryTick",
       "type": "procedure",
       "sortid": 6,
@@ -66,6 +57,36 @@
           }
         ]
       }
+    },
+    {
+      "name": "Mcoverhaul",
+      "type": "code",
+      "sortid": 5,
+      "compiles": false,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "mcoverhaul"
+    },
+    {
+      "name": "Print",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "print",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Start",
+      "type": "command",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "start"
     }
   ],
   "variable_elements": [],
