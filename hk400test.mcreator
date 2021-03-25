@@ -196,6 +196,23 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "hate"
+    },
+    {
+      "name": "CreativetabItemClear",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creativetab_item_clear",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],

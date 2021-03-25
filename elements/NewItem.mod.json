@@ -8,7 +8,7 @@
     "name": "Lebenspfeil",
     "rarity": "RARE",
     "creativeTab": {
-      "value": "CUSTOM:OurItems"
+      "value": "MATERIALS"
     },
     "stackSize": 1,
     "enchantability": 0,

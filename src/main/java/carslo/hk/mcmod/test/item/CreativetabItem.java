@@ -9,11 +9,15 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 
+import carslo.hk.mcmod.test.procedures.CreativetabItemClearProcedure;
 import carslo.hk.mcmod.test.Hk400testModElements;
 
 @Hk400testModElements.ModElement.Tag
@@ -30,13 +34,13 @@ public class CreativetabItem extends Hk400testModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(null).maxStackSize(0).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(null).maxStackSize(1).rarity(Rarity.EPIC));
 			setRegistryName("creativetab");
 		}
 
 		@Override
 		public int getItemEnchantability() {
-			return 0;
+			return -20;
 		}
 
 		@Override
@@ -46,13 +50,26 @@ public class CreativetabItem extends Hk400testModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-			return 1F;
+			return -1F;
 		}
 
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("The Creartive Tab"));
+		}
+
+		@Override
+		public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				CreativetabItemClearProcedure.executeProcedure($_dependencies);
+			}
 		}
 	}
 }
