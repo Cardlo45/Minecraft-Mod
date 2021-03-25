@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "new_item",
+    "texture": "red_arrow_up",
     "customModelName": "Normal",
-    "name": "New Item",
-    "rarity": "EPIC",
+    "name": "Roter Pfeil",
+    "rarity": "RARE",
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "MATERIALS"
     },
-    "stackSize": 64,
+    "stackSize": 16,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -19,7 +19,7 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "stayInGridWhenCrafting": true,
+    "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,

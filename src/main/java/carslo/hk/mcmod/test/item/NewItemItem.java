@@ -31,18 +31,8 @@ public class NewItemItem extends Hk400testModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(1).rarity(Rarity.EPIC));
+			super(new Item.Properties().group(ItemGroup.MATERIALS).maxDamage(1).rarity(Rarity.RARE));
 			setRegistryName("new_item");
-		}
-
-		@Override
-		public boolean hasContainerItem() {
-			return true;
-		}
-
-		@Override
-		public ItemStack getContainerItem(ItemStack itemstack) {
-			return new ItemStack(this);
 		}
 
 		@Override

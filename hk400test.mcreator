@@ -27,6 +27,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "test"
+    },
+    {
+      "name": "Upinthesky",
+      "type": "achievement",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upinthesky"
     }
   ],
   "variable_elements": [],
@@ -34,9 +43,11 @@
   "language_map": {
     "en_us": {
       "item.hk400test.test_spawn_egg": "Test Spawn Egg",
+      "advancements.upinthesky.title": "Rise",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
-      "item.hk400test.new_item": "New Item"
+      "item.hk400test.new_item": "Roter Pfeil",
+      "advancements.upinthesky.descr": "Höher als je zuvor"
     }
   },
   "workspaceSettings": {

@@ -3,7 +3,19 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "hk400test:new_item"
+      "item": "minecraft:red_wool"
+    },
+    {
+      "item": "minecraft:red_wool"
+    },
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:red_wool"
+    },
+    {
+      "item": "minecraft:red_wool"
     }
   ],
   "result": {
