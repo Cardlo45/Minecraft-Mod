@@ -3,18 +3,18 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "red_arrow_up",
+    "texture": "creativetab",
     "customModelName": "Normal",
-    "name": "Lebenspfeil",
-    "rarity": "RARE",
+    "name": "Creativetab",
+    "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:OurItems"
+      "value": "No creative tab entry"
     },
-    "stackSize": 1,
+    "stackSize": 0,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 1,
+    "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },
@@ -24,14 +24,11 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Erhöt deine Maximale Lebensspanne"
+      "The Creartive Tab"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
-    "inventoryStackSize": 64,
-    "onItemInInventoryTick": {
-      "name": "NewItemItemInInventoryTick"
-    }
+    "inventoryStackSize": 64
   }
 }

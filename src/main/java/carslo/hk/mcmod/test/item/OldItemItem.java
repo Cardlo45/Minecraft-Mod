@@ -10,7 +10,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.ActionResult;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
@@ -21,6 +20,7 @@ import java.util.List;
 import java.util.HashMap;
 
 import carslo.hk.mcmod.test.procedures.OldItemWennMitDerRechtenMaustasteInDerLuftGeklicktWurdeProcedure;
+import carslo.hk.mcmod.test.itemgroup.OurItemsItemGroup;
 import carslo.hk.mcmod.test.Hk400testModElements;
 
 @Hk400testModElements.ModElement.Tag
@@ -37,7 +37,7 @@ public class OldItemItem extends Hk400testModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(1).rarity(Rarity.RARE));
+			super(new Item.Properties().group(OurItemsItemGroup.tab).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("old_item");
 		}
 

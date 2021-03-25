@@ -4,7 +4,7 @@
   "definition": {
     "name": "Our Items",
     "icon": {
-      "value": "CUSTOM:NewItem"
+      "value": "CUSTOM:Creativetab"
     },
     "showSearch": false
   }

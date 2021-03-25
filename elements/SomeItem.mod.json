@@ -8,7 +8,7 @@
     "name": "Dornenpfeil",
     "rarity": "RARE",
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "CUSTOM:OurItems"
     },
     "stackSize": 1,
     "enchantability": 0,

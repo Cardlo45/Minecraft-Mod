@@ -178,6 +178,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "our_items"
+    },
+    {
+      "name": "Creativetab",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creativetab"
     }
   ],
   "variable_elements": [],
@@ -187,9 +196,11 @@
       "item.hk400test.test_spawn_egg": "Test Spawn Egg",
       "advancements.upinthesky.title": "Rise",
       "itemGroup.tabour_items": "Our Items",
-      "item.hk400test.old_item": "Normalizer",
+      "item.hk400test.old_item": "Normalisierer",
+      "item.hk400test.some_item": "Dornenpfeil",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
+      "item.hk400test.creativetab": "Creativetab",
       "item.hk400test.new_item": "Lebenspfeil",
       "advancements.upinthesky.descr": "H�her als je zuvor"
     }
