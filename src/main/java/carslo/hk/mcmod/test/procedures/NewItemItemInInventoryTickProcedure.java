@@ -23,6 +23,8 @@ public class NewItemItemInInventoryTickProcedure extends Hk400testModElements.Mo
 		Entity entity = (Entity) dependencies.get("entity");
 		LivingEntity livingentity = (LivingEntity) dependencies.get("entity");
 		if ((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() >= 30)) {
+			livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30);
+		} else {
 			livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH)
 					.setBaseValue((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() + 0.1));
 		}
