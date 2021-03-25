@@ -1,0 +1,30 @@
+{
+  "group": "hk400test",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "3": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "4": {
+      "item": "minecraft:diamond_block"
+    },
+    "5": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "7": {
+      "item": "minecraft:light_blue_wool"
+    }
+  },
+  "result": {
+    "item": "hk400test:some_item",
+    "count": 1
+  }
+}
