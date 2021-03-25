@@ -85,13 +85,13 @@ public static class Modelcustom_model extends EntityModel<Entity> {
 
 	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity e) {
 		super.setRotationAngles(f, f1, f2, f3, f4, f5, e);
-		this.Leg2.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-		this.Leg3.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+		this.Leg2.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
+		this.Leg3.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
 		this.Head.rotateAngleY = f3 / (180F / (float) Math.PI);
 		this.Head.rotateAngleX = f4 / (180F / (float) Math.PI);
-		this.Leg0.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+		this.Leg0.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
 		this.Leg1.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-		this.Wing1.rotateAngleZ = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
-		this.Wing0.rotateAngleZ = MathHelper.cos(f * 0.6662F) * f1;
+		this.Wing1.rotateAngleZ = MathHelper.cos(f * 0.6662F) * f1;
+		this.Wing0.rotateAngleZ = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
 	}
 }

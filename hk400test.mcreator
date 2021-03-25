@@ -136,6 +136,15 @@
       }
     },
     {
+      "name": "SomeItem",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "some_item"
+    },
+    {
       "name": "SomeItemItemInInventoryTick",
       "type": "procedure",
       "sortid": 9,
@@ -153,15 +162,6 @@
       }
     },
     {
-      "name": "SomeItem",
-      "type": "item",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "some_item"
-    },
-    {
       "name": "SomeRecipe",
       "type": "recipe",
       "sortid": 10,
@@ -169,6 +169,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "some_recipe"
+    },
+    {
+      "name": "OurItems",
+      "type": "tab",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "our_items"
     }
   ],
   "variable_elements": [],
@@ -177,8 +186,8 @@
     "en_us": {
       "item.hk400test.test_spawn_egg": "Test Spawn Egg",
       "advancements.upinthesky.title": "Rise",
+      "itemGroup.tabour_items": "Our Items",
       "item.hk400test.old_item": "Normalizer",
-      "item.hk400test.some_item": "Dornenpfeil",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
       "item.hk400test.new_item": "Lebenspfeil",
