@@ -3,7 +3,7 @@
   "_type": "mob",
   "definition": {
     "mobName": "Test",
-    "mobLabel": "Test",
+    "mobLabel": "",
     "mobModelName": "Modelcustom_model",
     "mobModelTexture": "sheep-pig-chicken-mount.png",
     "mobModelGlowTexture": "",

@@ -125,7 +125,7 @@ public class GmCmdProcedure extends Hk400testModElements.ModElement {
 					}
 				}.getText());
 			} else {
-				player = (String) "@s";
+				player = (String) (entity.getDisplayName().getString());
 			}
 			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
 				world.getWorld().getServer().getCommandManager().handleCommand(
