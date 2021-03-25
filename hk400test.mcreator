@@ -18,13 +18,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "new_recipe"
+    },
+    {
+      "name": "Test",
+      "type": "mob",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.hk400test.test_spawn_egg": "Test Spawn Egg",
       "{lore.item.new.item}": "A new Item",
+      "entity.hk400test.test": "Test",
       "item.hk400test.new_item": "New Item"
     }
   },
