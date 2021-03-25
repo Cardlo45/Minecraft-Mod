@@ -95,7 +95,7 @@
   "language_map": {
     "en_us": {
       "item.hk400test.test_spawn_egg": "Test Spawn Egg",
-      "item.hk400test.old_item": "Normalizer",
+      "item.hk400test.old_item": "Normalisierer",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
       "item.hk400test.new_item": "Lebenspfeil"
