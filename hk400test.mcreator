@@ -50,7 +50,7 @@
       "name": "Death",
       "type": "procedure",
       "sortid": 4,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "death",
