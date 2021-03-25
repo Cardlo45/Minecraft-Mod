@@ -171,15 +171,6 @@
       "registry_name": "some_recipe"
     },
     {
-      "name": "OurItems",
-      "type": "tab",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "our_items"
-    },
-    {
       "name": "Creativetab",
       "type": "item",
       "sortid": 11,
@@ -187,6 +178,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "creativetab"
+    },
+    {
+      "name": "OurItems",
+      "type": "tab",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "our_items"
     }
   ],
   "variable_elements": [],

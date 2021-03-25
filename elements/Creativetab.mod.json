@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "creativetab",
+    "texture": "creative-tab",
     "customModelName": "Normal",
     "name": "Creativetab",
     "rarity": "COMMON",
