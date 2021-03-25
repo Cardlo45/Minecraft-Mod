@@ -57,7 +57,7 @@ public class NewItemItem extends Hk400testModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Erh\u00F6t deine Maximale Lebensspanne"));
+			list.add(new StringTextComponent("Erh\uFFFDt deine Maximale Lebensspanne"));
 		}
 
 		@Override

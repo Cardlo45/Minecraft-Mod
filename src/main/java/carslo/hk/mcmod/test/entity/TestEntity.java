@@ -12,7 +12,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.BlockPos;
@@ -88,8 +87,6 @@ public class TestEntity extends Hk400testModElements.ModElement {
 			super(type, world);
 			experienceValue = 0;
 			setNoAI(false);
-			setCustomName(new StringTextComponent("Test"));
-			setCustomNameVisible(true);
 			this.moveController = new FlyingMovementController(this, 10, true);
 			this.navigator = new FlyingPathNavigator(this, this.world);
 		}

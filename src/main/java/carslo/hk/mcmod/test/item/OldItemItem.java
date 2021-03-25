@@ -59,7 +59,7 @@ public class OldItemItem extends Hk400testModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Kehre zu den normalen Menschen zur\u00FCck"));
+			list.add(new StringTextComponent("Kehre zu den normalen Menschen zur\uFFFDck"));
 		}
 
 		@Override

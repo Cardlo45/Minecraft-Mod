@@ -57,7 +57,7 @@ public class SomeItemItem extends Hk400testModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Erh\u00F6t den Angrifsschaden leicht"));
+			list.add(new StringTextComponent("Erh\uFFFDt den Angrifsschaden leicht"));
 		}
 
 		@Override
