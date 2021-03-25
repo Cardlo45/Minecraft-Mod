@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "{lore.item.new.item}"
+      "Its up to something"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
