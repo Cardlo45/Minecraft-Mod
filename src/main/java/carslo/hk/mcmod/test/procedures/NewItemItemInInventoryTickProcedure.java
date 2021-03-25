@@ -1,25 +1,11 @@
 package carslo.hk.mcmod.test.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.FillBucketEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import java.util.Map;
-import java.util.HashMap;
-
-import carslo.hk.mcmod.test.Hk400testModElements;
-
 @Hk400testModElements.ModElement.Tag
 public class NewItemItemInInventoryTickProcedure extends Hk400testModElements.ModElement {
+
 	public NewItemItemInInventoryTickProcedure(Hk400testModElements instance) {
 		super(instance, 6);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -29,12 +15,15 @@ public class NewItemItemInInventoryTickProcedure extends Hk400testModElements.Mo
 				System.err.println("Failed to load dependency entity for procedure NewItemItemInInventoryTick!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		LivingEntity livingentity = (LivingEntity) dependencies.get("entity");
 		if ((!(livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() > 30))) {
 			livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH)
 					.setBaseValue((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() + 0.01));
 		}
+
 	}
 
 	@SubscribeEvent
@@ -55,4 +44,5 @@ public class NewItemItemInInventoryTickProcedure extends Hk400testModElements.Mo
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
+
 }

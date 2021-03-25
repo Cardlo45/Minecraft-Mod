@@ -88,6 +88,52 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "old_recipe"
+    },
+    {
+      "name": "Gm",
+      "type": "command",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gm"
+    },
+    {
+      "name": "GmCmd",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gm_cmd",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -95,10 +141,12 @@
   "language_map": {
     "en_us": {
       "item.hk400test.test_spawn_egg": "Test Spawn Egg",
-      "item.hk400test.old_item": "Normalisierer",
+      "advancements.upinthesky.title": "Rise",
+      "item.hk400test.old_item": "Normalizer",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
-      "item.hk400test.new_item": "Lebenspfeil"
+      "item.hk400test.new_item": "Lebenspfeil",
+      "advancements.upinthesky.descr": "H�her als je zuvor"
     }
   },
   "workspaceSettings": {
