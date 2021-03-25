@@ -36,6 +36,40 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "upinthesky"
+    },
+    {
+      "name": "DeathCMD",
+      "type": "command",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "death_cmd"
+    },
+    {
+      "name": "Death",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "death",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -43,11 +77,9 @@
   "language_map": {
     "en_us": {
       "item.hk400test.test_spawn_egg": "Test Spawn Egg",
-      "advancements.upinthesky.title": "Rise",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
-      "item.hk400test.new_item": "Roter Pfeil",
-      "advancements.upinthesky.descr": "Höher als je zuvor"
+      "item.hk400test.new_item": "New Item"
     }
   },
   "workspaceSettings": {
