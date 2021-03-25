@@ -134,6 +134,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "OurItems",
+      "type": "tab",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "our_items"
     }
   ],
   "variable_elements": [],
@@ -142,6 +151,7 @@
     "en_us": {
       "item.hk400test.test_spawn_egg": "Test Spawn Egg",
       "advancements.upinthesky.title": "Rise",
+      "itemGroup.tabour_items": "Our Items",
       "item.hk400test.old_item": "Normalizer",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
