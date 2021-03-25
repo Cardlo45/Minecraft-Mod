@@ -38,25 +38,50 @@
       "registry_name": "upinthesky"
     },
     {
-      "name": "Print",
+      "name": "GmCmd",
       "type": "procedure",
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "print",
+      "registry_name": "gm_cmd",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
-      "name": "Start",
+      "name": "Gm",
       "type": "command",
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "start"
+      "registry_name": "gm"
     }
   ],
   "variable_elements": [],
@@ -64,9 +89,11 @@
   "language_map": {
     "en_us": {
       "item.hk400test.test_spawn_egg": "Test Spawn Egg",
+      "advancements.upinthesky.title": "Rise",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
-      "item.hk400test.new_item": "Roter Pfeil"
+      "item.hk400test.new_item": "Roter Pfeil",
+      "advancements.upinthesky.descr": "H�her als je zuvor"
     }
   },
   "workspaceSettings": {

@@ -1,6 +1,8 @@
 {
   "item.hk400test.test_spawn_egg": "Test Spawn Egg",
+  "advancements.upinthesky.title": "Rise",
   "{lore.item.new.item}": "A new Item",
   "entity.hk400test.test": "Test",
-  "item.hk400test.new_item": "Roter Pfeil"
+  "item.hk400test.new_item": "Roter Pfeil",
+  "advancements.upinthesky.descr": "H�her als je zuvor"
 }
