@@ -17,13 +17,13 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
 
-import carslo.hk.mcmod.test.procedures.GmCmdProcedure;
+import carslo.hk.mcmod.test.procedures.DeathProcedure;
 import carslo.hk.mcmod.test.Hk400testModElements;
 
 @Hk400testModElements.ModElement.Tag
-public class GmCommand extends Hk400testModElements.ModElement {
-	public GmCommand(Hk400testModElements instance) {
-		super(instance, 5);
+public class DIECommand extends Hk400testModElements.ModElement {
+	public DIECommand(Hk400testModElements instance) {
+		super(instance, 15);
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class GmCommand extends Hk400testModElements.ModElement {
 	}
 
 	private LiteralArgumentBuilder<CommandSource> customCommand() {
-		return LiteralArgumentBuilder.<CommandSource>literal("gm").requires(s -> s.hasPermissionLevel(4))
+		return LiteralArgumentBuilder.<CommandSource>literal("death").requires(s -> s.hasPermissionLevel(4))
 				.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(this::execute)).executes(this::execute);
 	}
 
@@ -55,11 +55,8 @@ public class GmCommand extends Hk400testModElements.ModElement {
 			Map<String, Object> $_dependencies = new HashMap<>();
 			$_dependencies.put("entity", entity);
 			$_dependencies.put("cmdparams", cmdparams);
-			$_dependencies.put("x", x);
-			$_dependencies.put("y", y);
-			$_dependencies.put("z", z);
 			$_dependencies.put("world", world);
-			GmCmdProcedure.executeProcedure($_dependencies);
+			DeathProcedure.executeProcedure($_dependencies);
 		}
 		return 0;
 	}
