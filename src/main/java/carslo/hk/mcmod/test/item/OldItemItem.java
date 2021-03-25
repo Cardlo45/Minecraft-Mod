@@ -6,11 +6,13 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.Hand;
+import net.minecraft.util.ActionResult;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
-import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
@@ -18,15 +20,15 @@ import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 
-import carslo.hk.mcmod.test.procedures.NewItemItemInInventoryTickProcedure;
+import carslo.hk.mcmod.test.procedures.OldItemWennMitDerRechtenMaustasteInDerLuftGeklicktWurdeProcedure;
 import carslo.hk.mcmod.test.Hk400testModElements;
 
 @Hk400testModElements.ModElement.Tag
-public class NewItemItem extends Hk400testModElements.ModElement {
-	@ObjectHolder("hk400test:new_item")
+public class OldItemItem extends Hk400testModElements.ModElement {
+	@ObjectHolder("hk400test:old_item")
 	public static final Item block = null;
-	public NewItemItem(Hk400testModElements instance) {
-		super(instance, 1);
+	public OldItemItem(Hk400testModElements instance) {
+		super(instance, 7);
 	}
 
 	@Override
@@ -35,8 +37,8 @@ public class NewItemItem extends Hk400testModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MATERIALS).maxDamage(1).rarity(Rarity.RARE));
-			setRegistryName("new_item");
+			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(1).rarity(Rarity.RARE));
+			setRegistryName("old_item");
 		}
 
 		@Override
@@ -57,20 +59,22 @@ public class NewItemItem extends Hk400testModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Its up to something"));
+			list.add(new StringTextComponent("Its not up to something"));
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
-			super.inventoryTick(itemstack, world, entity, slot, selected);
+		public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
+			ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
+			ItemStack itemstack = ar.getResult();
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				NewItemItemInInventoryTickProcedure.executeProcedure($_dependencies);
+				OldItemWennMitDerRechtenMaustasteInDerLuftGeklicktWurdeProcedure.executeProcedure($_dependencies);
 			}
+			return ar;
 		}
 	}
 }

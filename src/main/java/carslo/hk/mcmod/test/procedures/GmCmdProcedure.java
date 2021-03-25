@@ -1,24 +1,11 @@
 package carslo.hk.mcmod.test.procedures;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.Vec2f;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.command.ICommandSource;
-import net.minecraft.command.CommandSource;
-
-import java.util.Map;
-import java.util.HashMap;
-
-import carslo.hk.mcmod.test.Hk400testModElements;
-
 @Hk400testModElements.ModElement.Tag
 public class GmCmdProcedure extends Hk400testModElements.ModElement {
+
 	public GmCmdProcedure(Hk400testModElements instance) {
 		super(instance, 5);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -52,12 +39,14 @@ public class GmCmdProcedure extends Hk400testModElements.ModElement {
 				System.err.println("Failed to load dependency world for procedure GmCmd!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		HashMap cmdparams = (HashMap) dependencies.get("cmdparams");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		double gamemode = 0;
 		String player = "";
 		String change = "";
@@ -134,5 +123,7 @@ public class GmCmdProcedure extends Hk400testModElements.ModElement {
 						(("gamemode ") + "" + ((change)) + "" + (" ") + "" + ((player))));
 			}
 		}
+
 	}
+
 }

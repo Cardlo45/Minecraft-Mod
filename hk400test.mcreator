@@ -38,6 +38,15 @@
       "registry_name": "upinthesky"
     },
     {
+      "name": "Gm",
+      "type": "command",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gm"
+    },
+    {
       "name": "GmCmd",
       "type": "procedure",
       "sortid": 5,
@@ -75,13 +84,56 @@
       }
     },
     {
-      "name": "Gm",
-      "type": "command",
-      "sortid": 5,
+      "name": "NewItemItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "gm"
+      "registry_name": "new_item_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OldItem",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "old_item"
+    },
+    {
+      "name": "OldRecipe",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "old_recipe"
+    },
+    {
+      "name": "OldItemWennMitDerRechtenMaustasteInDerLuftGeklicktWurde",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "old_item_wenn_mit_der_rechten_maustaste_in_der_luft_geklickt_wurde",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -90,6 +142,7 @@
     "en_us": {
       "item.hk400test.test_spawn_egg": "Test Spawn Egg",
       "advancements.upinthesky.title": "Rise",
+      "item.hk400test.old_item": "Normalizer",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
       "item.hk400test.new_item": "Roter Pfeil",
