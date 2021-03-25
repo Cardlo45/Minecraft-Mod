@@ -21,4 +21,19 @@ ToDo: add Description
 
 
 
+[[dependencies.hk400test]]
+    modId="just_enough_items"
+    mandatory=false
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.hk400test]]
+    modId="curios"
+    mandatory=false
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.hk400test]]
+    modId="patchouli"
+    mandatory=false
+    ordering="NONE"
+    side="BOTH"
 
