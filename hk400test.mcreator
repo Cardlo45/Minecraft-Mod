@@ -36,6 +36,27 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "upinthesky"
+    },
+    {
+      "name": "Print",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "print",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Start",
+      "type": "command",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "start"
     }
   ],
   "variable_elements": [],
