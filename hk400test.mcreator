@@ -38,6 +38,58 @@
       "registry_name": "upinthesky"
     },
     {
+      "name": "NewItemItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "new_item_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OldItemWennMitDerRechtenMaustasteInDerLuftGeklicktWurde",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "old_item_wenn_mit_der_rechten_maustaste_in_der_luft_geklickt_wurde",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OldItem",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "old_item"
+    },
+    {
+      "name": "OldRecipe",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "old_recipe"
+    },
+    {
       "name": "Gm",
       "type": "command",
       "sortid": 5,
@@ -82,58 +134,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "NewItemItemInInventoryTick",
-      "type": "procedure",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "new_item_item_in_inventory_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "OldItem",
-      "type": "item",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "old_item"
-    },
-    {
-      "name": "OldRecipe",
-      "type": "recipe",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "old_recipe"
-    },
-    {
-      "name": "OldItemWennMitDerRechtenMaustasteInDerLuftGeklicktWurde",
-      "type": "procedure",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "old_item_wenn_mit_der_rechten_maustaste_in_der_luft_geklickt_wurde",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [],
@@ -145,7 +145,7 @@
       "item.hk400test.old_item": "Normalizer",
       "{lore.item.new.item}": "A new Item",
       "entity.hk400test.test": "Test",
-      "item.hk400test.new_item": "Roter Pfeil",
+      "item.hk400test.new_item": "Lebenspfeil",
       "advancements.upinthesky.descr": "H�her als je zuvor"
     }
   },

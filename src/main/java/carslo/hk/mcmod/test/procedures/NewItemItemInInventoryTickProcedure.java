@@ -5,7 +5,6 @@ import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -34,19 +33,7 @@ public class NewItemItemInInventoryTickProcedure extends Hk400testModElements.Mo
 		LivingEntity livingentity = (LivingEntity) dependencies.get("entity");
 		if ((!(livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() > 30))) {
 			livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH)
-					.setBaseValue((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() + 0.1));
-		} else {
-			if (((entity instanceof PlayerEntity)
-					? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Items.REDSTONE, (int) (1)))
-					: false)) {
-				if ((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() >= 30)) {
-					if (entity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(Items.REDSTONE, (int) (1));
-						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
-					}
-					livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30);
-				}
-			}
+					.setBaseValue((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() + 0.01));
 		}
 	}
 

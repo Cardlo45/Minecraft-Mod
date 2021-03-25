@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "grenn_arrow_down",
     "customModelName": "Normal",
-    "name": "Normalizer",
+    "name": "Normalisierer",
     "rarity": "RARE",
     "creativeTab": {
       "value": "MATERIALS"
@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Its not up to something"
+      "Kehre zu den normalen Menschen zurück"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
