@@ -1,11 +1,17 @@
 package carslo.hk.mcmod.test.procedures;
 
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+
+import java.util.Map;
+
+import carslo.hk.mcmod.test.Hk400testModElements;
+
 @Hk400testModElements.ModElement.Tag
 public class NewItemItemInInventoryTickProcedure extends Hk400testModElements.ModElement {
-
 	public NewItemItemInInventoryTickProcedure(Hk400testModElements instance) {
 		super(instance, 6);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -14,18 +20,9 @@ public class NewItemItemInInventoryTickProcedure extends Hk400testModElements.Mo
 				System.err.println("Failed to load dependency entity for procedure NewItemItemInInventoryTick!");
 			return;
 		}
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				System.err.println("Failed to load dependency sourceentity for procedure NewItemItemInInventoryTick!");
-			return;
-		}
-
 		Entity entity = (Entity) dependencies.get("entity");
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-
-		livingsourceentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH)
-				.setBaseValue((livingsourceentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() * 1.01));
-
+		LivingEntity livingentity = (LivingEntity) dependencies.get("entity");
+		livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH)
+				.setBaseValue((livingentity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue() * 1.01));
 	}
-
 }

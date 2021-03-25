@@ -41,7 +41,7 @@
       "name": "NewItemItemInInventoryTick",
       "type": "procedure",
       "sortid": 6,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "new_item_item_in_inventory_tick",
@@ -49,10 +49,6 @@
         "dependencies": [
           {
             "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
             "type": "entity"
           }
         ]
