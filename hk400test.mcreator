@@ -36,40 +36,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "upinthesky"
-    },
-    {
-      "name": "DeathCMD",
-      "type": "command",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "death_cmd"
-    },
-    {
-      "name": "Death",
-      "type": "procedure",
-      "sortid": 4,
-      "compiles": false,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "death",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "cmdparams",
-            "type": "map"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [],
