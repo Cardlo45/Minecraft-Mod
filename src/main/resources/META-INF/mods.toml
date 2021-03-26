@@ -6,7 +6,7 @@ modId="hk400test"
 version="1.0.1"
 displayName="Henkiller400 Co-Op Test"
 credits="ToDo: add credits"
-displayURL="https://nope-no-web-side-understand.oprts"
+displayURL="https://weside-in/future.ok"
 authors="Carslo45, Henkiller400"
 description='''
 ToDo: add Description
@@ -21,4 +21,19 @@ ToDo: add Description
 
 
 
+[[dependencies.hk400test]]
+    modId="just_enough_items"
+    mandatory=false
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.hk400test]]
+    modId="curios"
+    mandatory=false
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.hk400test]]
+    modId="patchouli"
+    mandatory=false
+    ordering="NONE"
+    side="BOTH"
 
