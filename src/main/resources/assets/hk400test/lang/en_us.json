@@ -1,13 +1,14 @@
 {
-  "item.hk400test.test_spawn_egg": "Test Spawn Egg",
+  "item.hk400test.test_spawn_egg": "Some-Mount Spawn Egg",
   "advancements.upinthesky.title": "Rise",
-  "itemGroup.tabour_items": "KLICK",
+  "itemGroup.tabour_items": "Mod Items",
+  "key.mcreator.gm_switch_key": "Gm Switch Key",
+  "enchantment.hk400test.hate": "Hass",
+  "advancements.upinthesky.descr": "Weiter oben als Jemals zuvor",
   "item.hk400test.old_item": "Normalisierer",
   "item.hk400test.some_item": "Dornenpfeil",
   "{lore.item.new.item}": "A new Item",
-  "entity.hk400test.test": "Test",
-  "item.hk400test.creativetab": "Creativetab",
-  "item.hk400test.new_item": "Lebenspfeil",
-  "enchantment.hk400test.hate": "Hass",
-  "advancements.upinthesky.descr": "H�her als je zuvor"
+  "entity.hk400test.test": "Some-Mount",
+  "item.hk400test.creativetab": "Icon",
+  "item.hk400test.new_item": "§4Lebenspfeil"
 }

@@ -15,7 +15,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class PlayerudatesProcedure extends Hk400testModElements.ModElement {
 	public PlayerudatesProcedure(Hk400testModElements instance) {
-		super(instance, 14);
+		super(instance, 18);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

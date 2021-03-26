@@ -25,7 +25,7 @@ public class CreativetabItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:creativetab")
 	public static final Item block = null;
 	public CreativetabItem(Hk400testModElements instance) {
-		super(instance, 11);
+		super(instance, 15);
 	}
 
 	@Override

@@ -6,8 +6,8 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "",
-    "recipeShapeless": false,
+    "group": "item_old",
+    "recipeShapeless": true,
     "recipeSlots": [
       {
         "value": ""

@@ -1,0 +1,84 @@
+{
+  "_fv": 13,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 225,
+    "height": 66,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Spielmodus",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Spielmodus",
+          "x": 186,
+          "y": 90
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Überlebens Modus",
+          "onClick": {
+            "name": "GmSurvival"
+          },
+          "width": 105,
+          "height": 20,
+          "name": "Überlebens Modus",
+          "x": 106,
+          "y": 102
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Kreativ Modus",
+          "onClick": {
+            "name": "GmCreative"
+          },
+          "width": 90,
+          "height": 20,
+          "name": "Kreativ Modus",
+          "x": 231,
+          "y": 101
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Abenteuer Modus",
+          "onClick": {
+            "name": "GmAdventure"
+          },
+          "width": 100,
+          "height": 20,
+          "name": "Abenteuer Modus",
+          "x": 106,
+          "y": 125
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Zuschauer Modus",
+          "onClick": {
+            "name": "GmSpectator"
+          },
+          "width": 100,
+          "height": 20,
+          "name": "Zuschauer Modus",
+          "x": 220,
+          "y": 124
+        }
+      }
+    ]
+  }
+}

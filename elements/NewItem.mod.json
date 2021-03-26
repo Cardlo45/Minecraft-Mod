@@ -5,10 +5,10 @@
     "renderType": 0,
     "texture": "red_arrow_up",
     "customModelName": "Normal",
-    "name": "Lebenspfeil",
+    "name": "§4Lebenspfeil",
     "rarity": "RARE",
     "creativeTab": {
-      "value": "MATERIALS"
+      "value": "CUSTOM:OurItems"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Erh�t deine Maximale Lebensspanne"
+      "§4Gib dir mehr Leben"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

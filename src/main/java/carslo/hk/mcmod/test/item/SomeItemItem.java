@@ -8,7 +8,6 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
@@ -19,6 +18,7 @@ import java.util.List;
 import java.util.HashMap;
 
 import carslo.hk.mcmod.test.procedures.SomeItemItemInInventoryTickProcedure;
+import carslo.hk.mcmod.test.itemgroup.OurItemsItemGroup;
 import carslo.hk.mcmod.test.Hk400testModElements;
 
 @Hk400testModElements.ModElement.Tag
@@ -26,7 +26,7 @@ public class SomeItemItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:some_item")
 	public static final Item block = null;
 	public SomeItemItem(Hk400testModElements instance) {
-		super(instance, 9);
+		super(instance, 4);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class SomeItemItem extends Hk400testModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.RARE));
+			super(new Item.Properties().group(OurItemsItemGroup.tab).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("some_item");
 		}
 
@@ -57,7 +57,7 @@ public class SomeItemItem extends Hk400testModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Erh\uFFFDt den Angrifsschaden leicht"));
+			list.add(new StringTextComponent("Gib dir mehr Angriffs Schaden"));
 		}
 
 		@Override

@@ -2,26 +2,26 @@
   "_fv": 13,
   "_type": "mob",
   "definition": {
-    "mobName": "Test",
+    "mobName": "Some-Mount",
     "mobLabel": "",
-    "mobModelName": "Modelcustom_model",
-    "mobModelTexture": "sheep-pig-chicken-mount.png",
+    "mobModelName": "Model_Some_Mount",
+    "mobModelTexture": "some-mount.png",
     "mobModelGlowTexture": "",
-    "modelWidth": 1.5,
-    "modelHeight": 1.5,
-    "modelShadowSize": 1.5,
-    "mountedYOffset": 0.0,
+    "modelWidth": 1.7,
+    "modelHeight": 1.7,
+    "modelShadowSize": 0.7000000000000001,
+    "mountedYOffset": -0.19999999999999998,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -13421773,
+      "value": -16777063,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -6710887,
+      "value": -10027009,
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:OurItems"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -54,8 +54,8 @@
     "trackingRange": 64,
     "health": 10,
     "xpAmount": 0,
-    "waterMob": false,
-    "flyingMob": true,
+    "waterMob": true,
+    "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -95,22 +95,30 @@
     "particleAmount": 4,
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"fly\"><field name=\"speed\">0.1</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"radius\">12</field><field name=\"entity\">EntityAgeable</field><field name=\"condition\">null,null</field></block></next></block></next></block></xml>",
-    "breedable": false,
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"radius\">9</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></xml>",
+    "breedable": true,
     "tameable": false,
-    "breedTriggerItems": [],
+    "breedTriggerItems": [
+      {
+        "value": "Items.SLIME_BALL"
+      }
+    ],
     "ranged": false,
     "rangedAttackItem": {
       "value": ""
     },
     "rangedItemType": "Default item",
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 4,
+    "spawningProbability": 1,
     "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 2,
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "mountains"
+      }
+    ],
     "spawnInDungeons": false
   }
 }
