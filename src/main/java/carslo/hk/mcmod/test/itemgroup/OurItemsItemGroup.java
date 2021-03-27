@@ -13,7 +13,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class OurItemsItemGroup extends Hk400testModElements.ModElement {
 	public OurItemsItemGroup(Hk400testModElements instance) {
-		super(instance, 15);
+		super(instance, 17);
 	}
 
 	@Override

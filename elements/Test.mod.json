@@ -5,7 +5,7 @@
     "mobName": "Some-Mount",
     "mobLabel": "",
     "mobModelName": "Model_Some_Mount",
-    "mobModelTexture": "some-mount.png",
+    "mobModelTexture": "entity_some_mount.png",
     "mobModelGlowTexture": "",
     "modelWidth": 1.7,
     "modelHeight": 1.7,

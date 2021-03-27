@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "creative-tab",
+    "texture": "gui_creative_tab",
     "customModelName": "Normal",
     "name": "Icon",
     "rarity": "EPIC",

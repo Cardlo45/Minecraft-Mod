@@ -23,7 +23,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaCommand extends Hk400testModElements.ModElement {
 	public ManaCommand(Hk400testModElements instance) {
-		super(instance, 33);
+		super(instance, 35);
 	}
 
 	@Override

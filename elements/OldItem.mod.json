@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "grenn_arrow_down",
+    "texture": "item_arrow_green",
     "customModelName": "Normal",
     "name": "Normalisierer",
     "rarity": "RARE",

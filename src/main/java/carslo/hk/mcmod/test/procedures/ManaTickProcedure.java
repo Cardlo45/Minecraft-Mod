@@ -16,7 +16,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaTickProcedure extends Hk400testModElements.ModElement {
 	public ManaTickProcedure(Hk400testModElements instance) {
-		super(instance, 31);
+		super(instance, 33);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -28,64 +28,64 @@ public class ManaTickProcedure extends Hk400testModElements.ModElement {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new Hk400testModVariables.PlayerVariables())).Mana) < 0)) {
+				.orElse(new Hk400testModVariables.PlayerVariables())).mana) < 0)) {
 			{
 				double _setval = (double) 0;
 				entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Mana = _setval;
+					capability.mana = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 		}
 		if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new Hk400testModVariables.PlayerVariables())).Mana) < 0)) {
+				.orElse(new Hk400testModVariables.PlayerVariables())).maxmana) < 0)) {
 			{
 				double _setval = (double) 0;
 				entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Mana = _setval;
+					capability.maxmana = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 		}
 		if (((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new Hk400testModVariables.PlayerVariables())).Mana) < (((entity
+				.orElse(new Hk400testModVariables.PlayerVariables())).mana) < (((entity
 						.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new Hk400testModVariables.PlayerVariables())).Mana) + 0.5))
+						.orElse(new Hk400testModVariables.PlayerVariables())).maxmana) + 0.5))
 				&& (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new Hk400testModVariables.PlayerVariables())).Mana) > (((entity
+						.orElse(new Hk400testModVariables.PlayerVariables())).mana) > (((entity
 								.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new Hk400testModVariables.PlayerVariables())).Mana) - 0.5)))) {
+								.orElse(new Hk400testModVariables.PlayerVariables())).maxmana) - 0.5)))) {
 			{
 				double _setval = (double) ((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new Hk400testModVariables.PlayerVariables())).Mana);
+						.orElse(new Hk400testModVariables.PlayerVariables())).maxmana);
 				entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Mana = _setval;
+					capability.mana = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 		} else {
 			if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new Hk400testModVariables.PlayerVariables())).Mana) < ((entity
+					.orElse(new Hk400testModVariables.PlayerVariables())).mana) < ((entity
 							.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new Hk400testModVariables.PlayerVariables())).Mana))) {
+							.orElse(new Hk400testModVariables.PlayerVariables())).maxmana))) {
 				{
 					double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new Hk400testModVariables.PlayerVariables())).Mana) + 0.1);
+							.orElse(new Hk400testModVariables.PlayerVariables())).mana) + 0.1);
 					entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Mana = _setval;
+						capability.mana = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 			}
 			if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new Hk400testModVariables.PlayerVariables())).Mana) > ((entity
+					.orElse(new Hk400testModVariables.PlayerVariables())).mana) > ((entity
 							.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new Hk400testModVariables.PlayerVariables())).Mana))) {
+							.orElse(new Hk400testModVariables.PlayerVariables())).maxmana))) {
 				{
 					double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new Hk400testModVariables.PlayerVariables())).Mana) - 0.2);
+							.orElse(new Hk400testModVariables.PlayerVariables())).mana) - 0.2);
 					entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Mana = _setval;
+						capability.mana = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

@@ -67,22 +67,22 @@ public class Hk400testModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putDouble("Mana", instance.Mana);
-			nbt.putDouble("MaxMana", instance.MaxMana);
+			nbt.putDouble("mana", instance.mana);
+			nbt.putDouble("maxmana", instance.maxmana);
 			return nbt;
 		}
 
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.Mana = nbt.getDouble("Mana");
-			instance.MaxMana = nbt.getDouble("MaxMana");
+			instance.mana = nbt.getDouble("mana");
+			instance.maxmana = nbt.getDouble("maxmana");
 		}
 	}
 
 	public static class PlayerVariables {
-		public double Mana = 100.0;
-		public double MaxMana = 100.0;
+		public double mana = 100.0;
+		public double maxmana = 100.0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				Hk400testMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -115,8 +115,8 @@ public class Hk400testModVariables {
 		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-		clone.Mana = original.Mana;
-		clone.MaxMana = original.MaxMana;
+		clone.mana = original.mana;
+		clone.maxmana = original.maxmana;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -141,8 +141,8 @@ public class Hk400testModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.Mana = message.data.Mana;
-					variables.MaxMana = message.data.MaxMana;
+					variables.mana = message.data.mana;
+					variables.maxmana = message.data.maxmana;
 				}
 			});
 			context.setPacketHandled(true);

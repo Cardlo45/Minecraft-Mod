@@ -7,13 +7,14 @@ import net.minecraft.entity.Entity;
 import java.util.Map;
 import java.util.HashMap;
 
+import carslo.hk.mcmod.test.Hk400testModVariables;
 import carslo.hk.mcmod.test.Hk400testModElements;
 import carslo.hk.mcmod.test.Hk400testMod;
 
 @Hk400testModElements.ModElement.Tag
 public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 	public ManaCmdProcedure(Hk400testModElements instance) {
-		super(instance, 30);
+		super(instance, 34);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -42,7 +43,7 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 				}
 				return "";
 			}
-		}.getText())).length() < 0)) {
+		}.getText())).length() > 0)) {
 			count = (double) new Object() {
 				int convert(String s) {
 					try {
@@ -117,7 +118,13 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 						return "";
 					}
 				}.getText())).equals("mana"))) {
-					count = (double) (count);
+					{
+						double _setval = (double) (count);
+						entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.mana = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					Hk400testMod.LOGGER
 							.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" set his mana to: ") + "" + ((count)) + "" + (".")));
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
@@ -133,7 +140,13 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 						return "";
 					}
 				}.getText())).equals("maxmana"))) {
-					count = (double) (count);
+					{
+						double _setval = (double) (count);
+						entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.maxmana = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					Hk400testMod.LOGGER
 							.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" set his maxmana to: ") + "" + ((count)) + "" + (".")));
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
@@ -164,7 +177,14 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 						return "";
 					}
 				}.getText())).equals("mana"))) {
-					count = (double) ((count) + (count));
+					{
+						double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new Hk400testModVariables.PlayerVariables())).mana) + (count));
+						entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.mana = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					Hk400testMod.LOGGER
 							.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" added: ") + "" + ((count)) + "" + (" to his mana.")));
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
@@ -180,7 +200,14 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 						return "";
 					}
 				}.getText())).equals("maxmana"))) {
-					count = (double) ((count) + (count));
+					{
+						double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new Hk400testModVariables.PlayerVariables())).maxmana) + (count));
+						entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.maxmana = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					Hk400testMod.LOGGER
 							.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" added: ") + "" + ((count)) + "" + (" to his maxmana.")));
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
@@ -211,7 +238,14 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 						return "";
 					}
 				}.getText())).equals("mana"))) {
-					count = (double) ((count) - (count));
+					{
+						double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new Hk400testModVariables.PlayerVariables())).mana) - (count));
+						entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.mana = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					Hk400testMod.LOGGER
 							.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" removed: ") + "" + ((count)) + "" + (" from his mana.")));
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
@@ -227,7 +261,14 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 						return "";
 					}
 				}.getText())).equals("maxmana"))) {
-					count = (double) ((count) - (count));
+					{
+						double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new Hk400testModVariables.PlayerVariables())).maxmana) - (count));
+						entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.maxmana = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					Hk400testMod.LOGGER.info(
 							(("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" removed: ") + "" + ((count)) + "" + (" from his maxmana.")));
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
@@ -258,7 +299,13 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 						return "";
 					}
 				}.getText())).equals("mana"))) {
-					count = (double) 100;
+					{
+						double _setval = (double) 100;
+						entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.mana = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					Hk400testMod.LOGGER.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" resetedhis mana.")));
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7aDeine Mana wurde auf den Standartwert gesetzt."),
@@ -273,7 +320,13 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 						return "";
 					}
 				}.getText())).equals("maxmana"))) {
-					count = (double) 100;
+					{
+						double _setval = (double) 100;
+						entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.maxmana = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					Hk400testMod.LOGGER.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" resetedhis maxmana.")));
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7aDeine MaxMana wurde auf den Standartwert gesetzt."),

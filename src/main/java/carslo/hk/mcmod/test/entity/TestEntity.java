@@ -58,7 +58,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 public class TestEntity extends Hk400testModElements.ModElement {
 	public static EntityType entity = null;
 	public TestEntity(Hk400testModElements instance) {
-		super(instance, 1);
+		super(instance, 7);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -93,7 +93,7 @@ public class TestEntity extends Hk400testModElements.ModElement {
 			return new MobRenderer(renderManager, new Model_Some_Mount(), 0.7000000000000001f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("hk400test:textures/some-mount.png");
+					return new ResourceLocation("hk400test:textures/entity_some_mount.png");
 				}
 			};
 		});

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "hk400test:items/red_arrow_up"
+    "layer0": "hk400test:items/item_arrow_red"
   }
 }

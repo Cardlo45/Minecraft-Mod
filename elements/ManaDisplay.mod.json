@@ -7,12 +7,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Mana: <VAR:integer:Mana>/<VAR:integer:MaxMana>",
+          "text": "<VAR:integer:mana>/<VAR:integer:maxmana>",
           "color": {
             "value": 1694498815,
             "falpha": 0.0
           },
-          "name": "Mana: <VAR:integer:Mana>/<VAR:integer:MaxMana>",
+          "name": "<VAR:integer:mana>/<VAR:integer:maxmana>",
           "x": 219,
           "y": 115
         }

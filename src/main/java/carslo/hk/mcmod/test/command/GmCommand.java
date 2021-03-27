@@ -23,7 +23,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class GmCommand extends Hk400testModElements.ModElement {
 	public GmCommand(Hk400testModElements instance) {
-		super(instance, 11);
+		super(instance, 13);
 	}
 
 	@Override

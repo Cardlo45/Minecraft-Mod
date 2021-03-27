@@ -16,7 +16,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaToIronPProcedure extends Hk400testModElements.ModElement {
 	public ManaToIronPProcedure(Hk400testModElements instance) {
-		super(instance, 33);
+		super(instance, 37);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -51,12 +51,12 @@ public class ManaToIronPProcedure extends Hk400testModElements.ModElement {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new Hk400testModVariables.PlayerVariables())).Mana) >= 10)) {
+				.orElse(new Hk400testModVariables.PlayerVariables())).mana) >= 10)) {
 			{
 				double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new Hk400testModVariables.PlayerVariables())).Mana) - 10);
+						.orElse(new Hk400testModVariables.PlayerVariables())).mana) - 10);
 				entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Mana = _setval;
+					capability.mana = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

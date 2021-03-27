@@ -18,7 +18,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaDisplayOverlay extends Hk400testModElements.ModElement {
 	public ManaDisplayOverlay(Hk400testModElements instance) {
-		super(instance, 31);
+		super(instance, 36);
 	}
 
 	@Override
@@ -38,11 +38,11 @@ public class ManaDisplayOverlay extends Hk400testModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 			if (true) {
-				Minecraft.getInstance().fontRenderer.drawString("Mana: "
+				Minecraft.getInstance().fontRenderer.drawString(""
 						+ (int) ((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new Hk400testModVariables.PlayerVariables())).Mana)
+								.orElse(new Hk400testModVariables.PlayerVariables())).mana)
 						+ "/" + (int) ((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new Hk400testModVariables.PlayerVariables())).MaxMana)
+								.orElse(new Hk400testModVariables.PlayerVariables())).maxmana)
 						+ "", posX + 6, posY + -5, 1694498815);
 			}
 		}

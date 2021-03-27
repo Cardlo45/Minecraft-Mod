@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "red_arrow_up",
+    "texture": "item_arrow_red",
     "customModelName": "Normal",
     "name": "§4Lebenspfeil",
     "rarity": "RARE",
