@@ -24,7 +24,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class GmSwitchPressProcedure extends Hk400testModElements.ModElement {
 	public GmSwitchPressProcedure(Hk400testModElements instance) {
-		super(instance, 22);
+		super(instance, 30);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -11,7 +11,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class OldItemWennMitDerRechtenMaustasteInDerLuftGeklicktWurdeProcedure extends Hk400testModElements.ModElement {
 	public OldItemWennMitDerRechtenMaustasteInDerLuftGeklicktWurdeProcedure(Hk400testModElements instance) {
-		super(instance, 8);
+		super(instance, 11);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

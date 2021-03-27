@@ -14,7 +14,7 @@ public class HateEnchantment extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:hate")
 	public static final Enchantment enchantment = null;
 	public HateEnchantment(Hk400testModElements instance) {
-		super(instance, 16);
+		super(instance, 19);
 	}
 
 	@Override

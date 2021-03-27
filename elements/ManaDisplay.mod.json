@@ -1,0 +1,23 @@
+{
+  "_fv": 13,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:integer:mana>/<VAR:integer:maxmana>",
+          "color": {
+            "value": 1694498815,
+            "falpha": 0.0
+          },
+          "name": "<VAR:integer:mana>/<VAR:integer:maxmana>",
+          "x": 219,
+          "y": 115
+        }
+      }
+    ],
+    "baseTexture": ""
+  }
+}

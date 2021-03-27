@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "hk400test:items/creative-tab"
+    "layer0": "hk400test:items/gui_creative_tab"
   }
 }
