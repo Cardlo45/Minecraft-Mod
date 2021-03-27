@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "item_arrow_red",
     "customModelName": "Normal",
-    "name": "§4Lebenspfeil",
+    "name": "Lebenspfeil",
     "rarity": "RARE",
     "creativeTab": {
       "value": "CUSTOM:OurItems"
@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§4Gib dir mehr Leben"
+      "Gib dir mehr Leben"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

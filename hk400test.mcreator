@@ -651,7 +651,7 @@
       "item.hk400test.some_item": "Dornenpfeil",
       "entity.hk400test.test": "Some-Mount",
       "item.hk400test.creativetab": "Icon",
-      "item.hk400test.new_item": "§4Lebenspfeil"
+      "item.hk400test.new_item": "Lebenspfeil"
     }
   },
   "workspaceSettings": {
