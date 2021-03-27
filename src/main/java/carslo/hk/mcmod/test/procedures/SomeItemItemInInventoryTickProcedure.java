@@ -11,7 +11,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class SomeItemItemInInventoryTickProcedure extends Hk400testModElements.ModElement {
 	public SomeItemItemInInventoryTickProcedure(Hk400testModElements instance) {
-		super(instance, 12);
+		super(instance, 13);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

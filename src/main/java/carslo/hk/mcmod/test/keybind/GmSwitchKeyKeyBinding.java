@@ -33,7 +33,7 @@ public class GmSwitchKeyKeyBinding extends Hk400testModElements.ModElement {
 	private KeyBinding keys;
 	private long lastpress = 0;
 	public GmSwitchKeyKeyBinding(Hk400testModElements instance) {
-		super(instance, 22);
+		super(instance, 30);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}

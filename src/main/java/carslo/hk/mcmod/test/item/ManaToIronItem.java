@@ -22,7 +22,7 @@ public class ManaToIronItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:mana_to_iron")
 	public static final Item block = null;
 	public ManaToIronItem(Hk400testModElements instance) {
-		super(instance, 32);
+		super(instance, 2);
 	}
 
 	@Override

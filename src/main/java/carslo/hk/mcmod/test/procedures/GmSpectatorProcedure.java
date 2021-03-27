@@ -11,7 +11,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class GmSpectatorProcedure extends Hk400testModElements.ModElement {
 	public GmSpectatorProcedure(Hk400testModElements instance) {
-		super(instance, 25);
+		super(instance, 26);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
