@@ -38,18 +38,12 @@ public class ManaDisplayOverlay extends Hk400testModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 			if (true) {
-				Minecraft
-						.getInstance().fontRenderer
-								.drawString(
-										"Level: " + ((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-												.orElse(new Hk400testModVariables.PlayerVariables())).ManaLevel) + "",
-										posX + -48, posY + -35, -3355444);
 				Minecraft.getInstance().fontRenderer.drawString("Mana: "
 						+ (int) ((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new Hk400testModVariables.PlayerVariables())).Mana)
 						+ "/" + (int) ((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new Hk400testModVariables.PlayerVariables())).MaxMana)
-						+ "", posX + -49, posY + -23, -3355444);
+						+ "", posX + 6, posY + -5, 1694498815);
 			}
 		}
 	}

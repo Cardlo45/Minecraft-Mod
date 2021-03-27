@@ -69,7 +69,6 @@ public class Hk400testModVariables {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("Mana", instance.Mana);
 			nbt.putDouble("MaxMana", instance.MaxMana);
-			nbt.putDouble("ManaLevel", instance.ManaLevel);
 			return nbt;
 		}
 
@@ -78,14 +77,12 @@ public class Hk400testModVariables {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.Mana = nbt.getDouble("Mana");
 			instance.MaxMana = nbt.getDouble("MaxMana");
-			instance.ManaLevel = nbt.getDouble("ManaLevel");
 		}
 	}
 
 	public static class PlayerVariables {
 		public double Mana = 100.0;
 		public double MaxMana = 100.0;
-		public double ManaLevel = 1.0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				Hk400testMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -120,7 +117,6 @@ public class Hk400testModVariables {
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.Mana = original.Mana;
 		clone.MaxMana = original.MaxMana;
-		clone.ManaLevel = original.ManaLevel;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -147,7 +143,6 @@ public class Hk400testModVariables {
 							.orElse(new PlayerVariables()));
 					variables.Mana = message.data.Mana;
 					variables.MaxMana = message.data.MaxMana;
-					variables.ManaLevel = message.data.ManaLevel;
 				}
 			});
 			context.setPacketHandled(true);

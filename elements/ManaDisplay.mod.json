@@ -7,27 +7,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Level: <VAR:ManaLevel>",
-          "color": {
-            "value": -3355444,
-            "falpha": 0.0
-          },
-          "name": "Level: <VAR:ManaLevel>",
-          "x": 165,
-          "y": 85
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "text": "Mana: <VAR:integer:Mana>/<VAR:integer:MaxMana>",
           "color": {
-            "value": -3355444,
+            "value": 1694498815,
             "falpha": 0.0
           },
           "name": "Mana: <VAR:integer:Mana>/<VAR:integer:MaxMana>",
-          "x": 164,
-          "y": 97
+          "x": 219,
+          "y": 115
         }
       }
     ],

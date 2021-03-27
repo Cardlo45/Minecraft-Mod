@@ -460,6 +460,48 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "mana_display"
+    },
+    {
+      "name": "ManaToIron",
+      "type": "item",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mana_to_iron"
+    },
+    {
+      "name": "ManaToIronP",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mana_to_iron_p",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -474,12 +516,6 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "100.0"
-    },
-    {
-      "name": "ManaLevel",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "1.0"
     }
   ],
   "sound_elements": [],
@@ -491,6 +527,7 @@
       "key.mcreator.gm_switch_key": "Gm Switch Key",
       "enchantment.hk400test.hate": "Hass",
       "advancements.upinthesky.descr": "Weiter oben als Jemals zuvor",
+      "item.hk400test.mana_to_iron": "Mana To Iron",
       "item.hk400test.old_item": "Normalisierer",
       "item.hk400test.some_item": "Dornenpfeil",
       "{lore.item.new.item}": "A new Item",
