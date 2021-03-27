@@ -10,6 +10,7 @@ import net.minecraft.entity.Entity;
 import java.util.Map;
 import java.util.HashMap;
 
+import carslo.hk.mcmod.test.Hk400testModVariables;
 import carslo.hk.mcmod.test.Hk400testModElements;
 
 @Hk400testModElements.ModElement.Tag
@@ -26,24 +27,69 @@ public class ManaTickProcedure extends Hk400testModElements.ModElement {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((entity.getPersistentData().getDouble("ManaSetup")) != 1)) {
-			entity.getPersistentData().putDouble("ManaLevel", 1);
-			entity.getPersistentData().putDouble("Mana", 100);
-			entity.getPersistentData().putDouble("MaxMana", 100);
-			entity.getPersistentData().putDouble("ManaSetup", 1);
+		if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new Hk400testModVariables.PlayerVariables())).Mana) < 0)) {
+			{
+				double _setval = (double) 0;
+				entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Mana = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
-		if (((entity.getPersistentData().getDouble("ManaLevel")) < 1)) {
-			entity.getPersistentData().putDouble("ManaLevel", 1);
-		} else if (((entity.getPersistentData().getDouble("MaxMana")) < 100)) {
-			entity.getPersistentData().putDouble("MaxMana", 100);
-		} else if (((entity.getPersistentData().getDouble("Mana")) < 0)) {
-			entity.getPersistentData().putDouble("Mana", 0);
+		if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new Hk400testModVariables.PlayerVariables())).Mana) < 0)) {
+			{
+				double _setval = (double) 0;
+				entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Mana = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
-		if (((entity.getPersistentData().getDouble("Mana")) > (entity.getPersistentData().getDouble("MaxMana")))) {
-			entity.getPersistentData().putDouble("Mana", ((entity.getPersistentData().getDouble("Mana")) - 0.1));
-		}
-		if (((entity.getPersistentData().getDouble("Mana")) < (entity.getPersistentData().getDouble("MaxMana")))) {
-			entity.getPersistentData().putDouble("Mana", ((entity.getPersistentData().getDouble("Mana")) + 0.01));
+		if (((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new Hk400testModVariables.PlayerVariables())).Mana) < (((entity
+						.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new Hk400testModVariables.PlayerVariables())).Mana) + 0.5))
+				&& (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new Hk400testModVariables.PlayerVariables())).Mana) > (((entity
+								.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new Hk400testModVariables.PlayerVariables())).Mana) - 0.5)))) {
+			{
+				double _setval = (double) ((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new Hk400testModVariables.PlayerVariables())).Mana);
+				entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Mana = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		} else {
+			if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new Hk400testModVariables.PlayerVariables())).Mana) < ((entity
+							.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new Hk400testModVariables.PlayerVariables())).Mana))) {
+				{
+					double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new Hk400testModVariables.PlayerVariables())).Mana) + 0.1);
+					entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Mana = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new Hk400testModVariables.PlayerVariables())).Mana) > ((entity
+							.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new Hk400testModVariables.PlayerVariables())).Mana))) {
+				{
+					double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new Hk400testModVariables.PlayerVariables())).Mana) - 0.2);
+					entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Mana = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 		}
 	}
 

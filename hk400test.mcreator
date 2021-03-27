@@ -451,9 +451,37 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "mana"
+    },
+    {
+      "name": "ManaDisplay",
+      "type": "overlay",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mana_display"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Mana",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "100.0"
+    },
+    {
+      "name": "MaxMana",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "100.0"
+    },
+    {
+      "name": "ManaLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {

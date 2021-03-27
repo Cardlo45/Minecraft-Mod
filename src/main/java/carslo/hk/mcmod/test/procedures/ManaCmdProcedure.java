@@ -32,7 +32,25 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 		double count = 0;
 		String type = "";
 		String logplayer = "";
-		logplayer = (String) (entity.getDisplayName().getString());
+		String exeplayer = "";
+		exeplayer = (String) (entity.getDisplayName().getString());
+		count = (double) new Object() {
+			int convert(String s) {
+				try {
+					return Integer.parseInt(s.trim());
+				} catch (Exception e) {
+				}
+				return 0;
+			}
+		}.convert((new Object() {
+			public String getText() {
+				String param = (String) cmdparams.get("2");
+				if (param != null) {
+					return param;
+				}
+				return "";
+			}
+		}.getText()));
 		if ((((new Object() {
 			public String getText() {
 				String param = (String) cmdparams.get("0");
@@ -44,46 +62,34 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 		}.getText())).equals("help"))) {
 			for (int index0 = 0; index0 < (int) (1); index0++) {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A75/mana"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A72Basics Tests and Notes"), (false));
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A76=============================="), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A76===================="), (false));
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A75/mana help"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana: {needed} [optional]"), (false));
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cZeige diese Hilfe an"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Types: mana, maxmana"), (false));
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A75/mana set {level, maxmana, mana} {level}"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("help"), (false));
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cSetzte einen Spezifischen Wert"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("set {type} {count}"), (false));
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A75/mana add {level, maxmana, mana} {level}"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("add {type} {count}"), (false));
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cGib einen Spezifischen Wert dazu"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("remove {type} {count}"), (false));
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A75/mana remove {level, maxmana, mana} {level}"), (false));
-				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cEntferne einen Spezifischen wert"), (false));
-				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A75/mana reset {level, maxmana, mana}"), (false));
-				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cSetze einen Spezifischen wert zur\u00FCck"), (false));
-				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A76=============================="), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("reset {type}"), (false));
 				}
 			}
-			Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat nach hilfe gefragt")));
+			Hk400testMod.LOGGER.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" used help.")));
 		} else if ((((new Object() {
 			public String getText() {
 				String param = (String) cmdparams.get("0");
@@ -101,38 +107,13 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 					}
 					return "";
 				}
-			}.getText())).equals("level"))) {
-				type = (String) "ManaLevel";
-				if ((((new Object() {
-					public String getText() {
-						String param = (String) cmdparams.get("2");
-						if (param != null) {
-							return param;
-						}
-						return "";
-					}
-				}.getText())).length() > 0)) {
-					count = (double) new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert((new Object() {
-						public String getText() {
-							String param = (String) cmdparams.get("2");
-							if (param != null) {
-								return param;
-							}
-							return "";
-						}
-					}.getText()));
-				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana help f\u00FCr mehr Infos."), (false));
-					}
+			}.getText())).equals("mana"))) {
+				count = (double) (count);
+				Hk400testMod.LOGGER
+						.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" set his mana to: ") + "" + ((count)) + "" + (".")));
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((("\u00A7aSet mana to: ") + "" + ((count)) + "" + ("."))),
+							(false));
 				}
 			} else if ((((new Object() {
 				public String getText() {
@@ -143,90 +124,18 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 					return "";
 				}
 			}.getText())).equals("maxmana"))) {
-				type = (String) "MaxMana";
-				if ((((new Object() {
-					public String getText() {
-						String param = (String) cmdparams.get("2");
-						if (param != null) {
-							return param;
-						}
-						return "";
-					}
-				}.getText())).length() > 0)) {
-					count = (double) new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert((new Object() {
-						public String getText() {
-							String param = (String) cmdparams.get("2");
-							if (param != null) {
-								return param;
-							}
-							return "";
-						}
-					}.getText()));
-				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana help f\u00FCr mehr Infos."), (false));
-					}
-				}
-			} else if ((((new Object() {
-				public String getText() {
-					String param = (String) cmdparams.get("1");
-					if (param != null) {
-						return param;
-					}
-					return "";
-				}
-			}.getText())).equals("mana"))) {
-				type = (String) "Mana";
-				if ((((new Object() {
-					public String getText() {
-						String param = (String) cmdparams.get("2");
-						if (param != null) {
-							return param;
-						}
-						return "";
-					}
-				}.getText())).length() > 0)) {
-					count = (double) new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert((new Object() {
-						public String getText() {
-							String param = (String) cmdparams.get("2");
-							if (param != null) {
-								return param;
-							}
-							return "";
-						}
-					}.getText()));
-				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana help f\u00FCr mehr Infos."), (false));
-					}
+				count = (double) (count);
+				Hk400testMod.LOGGER
+						.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" set his maxmana to: ") + "" + ((count)) + "" + (".")));
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((("\u00A7aSet maxmana to: ") + "" + ((count)) + "" + ("."))),
+							(false));
 				}
 			} else {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A74/mana help f\u00FCr mehr Infos."), (false));
+					((PlayerEntity) entity)
+							.sendStatusMessage(new StringTextComponent("\u00A74Use /mana help syntax, more information on my Discord."), (false));
 				}
-				Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat versucht /mana zu nutzen")));
-			}
-			entity.getPersistentData().putDouble((type), (count));
-			Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat: ") + "" + ((type)) + "" + (" auf: ") + "" + ((count)) + "" + (" gesetzt.")));
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((((type)) + "" + (" auf: ") + "" + ((count)) + "" + (" gesetzt."))),
-						(false));
 			}
 		} else if ((((new Object() {
 			public String getText() {
@@ -245,38 +154,13 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 					}
 					return "";
 				}
-			}.getText())).equals("level"))) {
-				type = (String) "ManaLevel";
-				if ((((new Object() {
-					public String getText() {
-						String param = (String) cmdparams.get("2");
-						if (param != null) {
-							return param;
-						}
-						return "";
-					}
-				}.getText())).length() > 0)) {
-					count = (double) new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert((new Object() {
-						public String getText() {
-							String param = (String) cmdparams.get("2");
-							if (param != null) {
-								return param;
-							}
-							return "";
-						}
-					}.getText()));
-				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana help f\u00FCr mehr Infos."), (false));
-					}
+			}.getText())).equals("mana"))) {
+				count = (double) ((count) + (count));
+				Hk400testMod.LOGGER
+						.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" added: ") + "" + ((count)) + "" + (" to his mana.")));
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((("\u00A7aAdded ") + "" + ((count)) + "" + (" to your mana."))),
+							(false));
 				}
 			} else if ((((new Object() {
 				public String getText() {
@@ -287,91 +171,18 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 					return "";
 				}
 			}.getText())).equals("maxmana"))) {
-				type = (String) "MaxMana";
-				if ((((new Object() {
-					public String getText() {
-						String param = (String) cmdparams.get("2");
-						if (param != null) {
-							return param;
-						}
-						return "";
-					}
-				}.getText())).length() > 0)) {
-					count = (double) new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert((new Object() {
-						public String getText() {
-							String param = (String) cmdparams.get("2");
-							if (param != null) {
-								return param;
-							}
-							return "";
-						}
-					}.getText()));
-				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana help f\u00FCr mehr Infos."), (false));
-					}
-				}
-			} else if ((((new Object() {
-				public String getText() {
-					String param = (String) cmdparams.get("1");
-					if (param != null) {
-						return param;
-					}
-					return "";
-				}
-			}.getText())).equals("mana"))) {
-				type = (String) "Mana";
-				if ((((new Object() {
-					public String getText() {
-						String param = (String) cmdparams.get("2");
-						if (param != null) {
-							return param;
-						}
-						return "";
-					}
-				}.getText())).length() > 0)) {
-					count = (double) new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert((new Object() {
-						public String getText() {
-							String param = (String) cmdparams.get("2");
-							if (param != null) {
-								return param;
-							}
-							return "";
-						}
-					}.getText()));
-				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana help f\u00FCr mehr Infos."), (false));
-					}
+				count = (double) ((count) + (count));
+				Hk400testMod.LOGGER
+						.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" added: ") + "" + ((count)) + "" + (" to his maxmana.")));
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity)
+							.sendStatusMessage(new StringTextComponent((("\u00A7aAdded ") + "" + ((count)) + "" + (" to your maxmana."))), (false));
 				}
 			} else {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A74/mana help f\u00FCr mehr Infos."), (false));
+					((PlayerEntity) entity)
+							.sendStatusMessage(new StringTextComponent("\u00A74Use /mana help syntax, more information on my Discord."), (false));
 				}
-				Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat versucht /mana zu nutzen")));
-			}
-			entity.getPersistentData().putDouble((type), ((entity.getPersistentData().getDouble((type))) + (count)));
-			Hk400testMod.LOGGER
-					.info((((logplayer)) + "" + (" hat: ") + "" + ((count)) + "" + (" zu: ") + "" + ((type)) + "" + (" hinzugef\u00FCgt.")));
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(
-						new StringTextComponent((((count)) + "" + (" zu: ") + "" + ((type)) + "" + (" hinzugef\u00FCgt."))), (false));
 			}
 		} else if ((((new Object() {
 			public String getText() {
@@ -390,38 +201,13 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 					}
 					return "";
 				}
-			}.getText())).equals("level"))) {
-				type = (String) "ManaLevel";
-				if ((((new Object() {
-					public String getText() {
-						String param = (String) cmdparams.get("2");
-						if (param != null) {
-							return param;
-						}
-						return "";
-					}
-				}.getText())).length() > 0)) {
-					count = (double) new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert((new Object() {
-						public String getText() {
-							String param = (String) cmdparams.get("2");
-							if (param != null) {
-								return param;
-							}
-							return "";
-						}
-					}.getText()));
-				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana help f\u00FCr mehr Infos."), (false));
-					}
+			}.getText())).equals("mana"))) {
+				count = (double) ((count) - (count));
+				Hk400testMod.LOGGER
+						.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" removed: ") + "" + ((count)) + "" + (" from his mana.")));
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity)
+							.sendStatusMessage(new StringTextComponent((("\u00A7aRemoved ") + "" + ((count)) + "" + (" from your mana."))), (false));
 				}
 			} else if ((((new Object() {
 				public String getText() {
@@ -432,90 +218,18 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 					return "";
 				}
 			}.getText())).equals("maxmana"))) {
-				type = (String) "MaxMana";
-				if ((((new Object() {
-					public String getText() {
-						String param = (String) cmdparams.get("2");
-						if (param != null) {
-							return param;
-						}
-						return "";
-					}
-				}.getText())).length() > 0)) {
-					count = (double) new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert((new Object() {
-						public String getText() {
-							String param = (String) cmdparams.get("2");
-							if (param != null) {
-								return param;
-							}
-							return "";
-						}
-					}.getText()));
-				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana help f\u00FCr mehr Infos."), (false));
-					}
-				}
-			} else if ((((new Object() {
-				public String getText() {
-					String param = (String) cmdparams.get("1");
-					if (param != null) {
-						return param;
-					}
-					return "";
-				}
-			}.getText())).equals("mana"))) {
-				type = (String) "Mana";
-				if ((((new Object() {
-					public String getText() {
-						String param = (String) cmdparams.get("2");
-						if (param != null) {
-							return param;
-						}
-						return "";
-					}
-				}.getText())).length() > 0)) {
-					count = (double) new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert((new Object() {
-						public String getText() {
-							String param = (String) cmdparams.get("2");
-							if (param != null) {
-								return param;
-							}
-							return "";
-						}
-					}.getText()));
-				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("/mana help f\u00FCr mehr Infos."), (false));
-					}
+				count = (double) ((count) - (count));
+				Hk400testMod.LOGGER
+						.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" removed: ") + "" + ((count)) + "" + (" from his maxmana.")));
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity).sendStatusMessage(
+							new StringTextComponent((("\u00A7aRemoved ") + "" + ((count)) + "" + (" from your maxmana."))), (false));
 				}
 			} else {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A74/mana help f\u00FCr mehr Infos."), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A74Use /mana help syntax, more information on my Discord"),
+							(false));
 				}
-				Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat versucht /mana zu nutzen")));
-			}
-			entity.getPersistentData().putDouble((type), ((entity.getPersistentData().getDouble((type))) - (count)));
-			Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat: ") + "" + ((count)) + "" + (" von: ") + "" + ((type)) + "" + (" entfernt.")));
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((((count)) + "" + (" von: ") + "" + ((type)) + "" + (" entfernt"))),
-						(false));
 			}
 		} else if ((((new Object() {
 			public String getText() {
@@ -534,11 +248,11 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 					}
 					return "";
 				}
-			}.getText())).equals("level"))) {
-				entity.getPersistentData().putDouble("ManaLevel", 1);
-				Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat: ") + "" + ((type)) + "" + (" zur\u00FCckgesetzt.")));
+			}.getText())).equals("mana"))) {
+				count = (double) 100;
+				Hk400testMod.LOGGER.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" resetedhis mana.")));
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((((type)) + "" + (" zur\u00FCck gesetzt."))), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7aReseted your mana."), (false));
 				}
 			} else if ((((new Object() {
 				public String getText() {
@@ -549,36 +263,22 @@ public class ManaCmdProcedure extends Hk400testModElements.ModElement {
 					return "";
 				}
 			}.getText())).equals("maxmana"))) {
-				entity.getPersistentData().putDouble("MaxMana", 100);
-				Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat: ") + "" + ((type)) + "" + (" zur\u00FCckgesetzt.")));
+				count = (double) 100;
+				Hk400testMod.LOGGER.info((("\u00A76Mana Command: ") + "" + ((exeplayer)) + "" + (" resetedhis maxmana.")));
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((((type)) + "" + (" zur\u00FCck gesetzt."))), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7aReseted your maxmana."), (false));
 				}
-			} else if ((((new Object() {
-				public String getText() {
-					String param = (String) cmdparams.get("1");
-					if (param != null) {
-						return param;
-					}
-					return "";
-				}
-			}.getText())).equals("mana"))) {
-				entity.getPersistentData().putDouble("Mana", 0);
-				Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat: ") + "" + ((type)) + "" + (" zur\u00FCckgesetzt.")));
 			} else {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((((type)) + "" + (" zur\u00FCck gesetzt."))), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A74Use /mana help syntax, more information on my Discord"),
+							(false));
 				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A74/mana help f\u00FCr mehr Infos."), (false));
-				}
-				Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat versucht /mana zu nutzen")));
 			}
 		} else {
 			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A74/mana help f\u00FCr mehr Infos."), (false));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A74Use /mana help syntax, more information on my Discord."),
+						(false));
 			}
-			Hk400testMod.LOGGER.info((((logplayer)) + "" + (" hat versucht /mana zu nutzen")));
 		}
 	}
 }
