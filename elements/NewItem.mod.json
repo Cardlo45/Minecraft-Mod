@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "item_arrow_red",
     "customModelName": "Normal",
-    "name": "ยง4Lebenspfeil",
+    "name": "ง4Lebenspfeil",
     "rarity": "RARE",
     "creativeTab": {
       "value": "CUSTOM:OurItems"
@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "ยง4Gib dir mehr Leben"
+      "ง4Gib dir mehr Leben"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

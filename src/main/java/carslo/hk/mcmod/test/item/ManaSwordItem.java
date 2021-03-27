@@ -101,7 +101,7 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Nutze \u00A7320 Mana \u00A7rum ein Mana Projektil zu erschaffen das 10 Schaden macht"));
+			list.add(new StringTextComponent("Nutze \u00A7320 Mana \u00A7rum ein Mana Projektil zuerschaffen das 10 Schaden macht"));
 		}
 
 		@Override
