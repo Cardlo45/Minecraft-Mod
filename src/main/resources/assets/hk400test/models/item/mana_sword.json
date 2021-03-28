@@ -1,42 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "hk400test:custom/_mana_sword",
   "textures": {
-    "layer0": "hk400test:items/item_mana_sword"
-  },
-  "display": {
-    "thirdperson_righthand": {
-      "rotation": [
-        -80,
-        260,
-        -40
-      ],
-      "translation": [
-        -1,
-        -2,
-        2.5
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ]
-    },
-    "thirdperson_lefthand": {
-      "rotation": [
-        -80,
-        -280,
-        40
-      ],
-      "translation": [
-        -1,
-        -2,
-        2.5
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ]
-    }
+    "0": "hk400test:blocks/block_mana_sword",
+    "particle": "hk400test:items/item_mana_sword"
   }
 }

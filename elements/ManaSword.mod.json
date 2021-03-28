@@ -2,12 +2,12 @@
   "_fv": 13,
   "_type": "gun",
   "definition": {
-    "renderType": 0,
+    "renderType": 1,
     "texture": "item_mana_sword",
-    "customModelName": "Normal",
+    "customModelName": "_mana_sword:default",
     "name": "Mana Schwert",
     "specialInfo": [
-      "Nutze �320 Mana �rum ein Mana Projektil zuerschaffen das 10 Schaden macht"
+      "Nutze §320 Mana §rum ein Mana Projektil zuerschaffen das 10 Schaden macht"
     ],
     "creativeTab": {
       "value": "CUSTOM:OurItems"
