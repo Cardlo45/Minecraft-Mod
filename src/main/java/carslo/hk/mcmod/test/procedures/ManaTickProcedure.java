@@ -16,7 +16,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaTickProcedure extends Hk400testModElements.ModElement {
 	public ManaTickProcedure(Hk400testModElements instance) {
-		super(instance, 33);
+		super(instance, 35);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

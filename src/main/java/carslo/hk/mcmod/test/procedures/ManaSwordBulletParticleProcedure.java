@@ -10,7 +10,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaSwordBulletParticleProcedure extends Hk400testModElements.ModElement {
 	public ManaSwordBulletParticleProcedure(Hk400testModElements instance) {
-		super(instance, 44);
+		super(instance, 45);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

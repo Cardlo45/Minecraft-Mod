@@ -28,7 +28,7 @@ public class ManaPotionItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:mana_potion")
 	public static final Item block = null;
 	public ManaPotionItem(Hk400testModElements instance) {
-		super(instance, 3);
+		super(instance, 4);
 	}
 
 	@Override
@@ -59,7 +59,7 @@ public class ManaPotionItem extends Hk400testModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Heile 20% deiner Maximalen Mana"));
+			list.add(new StringTextComponent("Heile \u00A7e20% \u00A7rdeiner \u00A73Maximalen Mana"));
 		}
 
 		@Override

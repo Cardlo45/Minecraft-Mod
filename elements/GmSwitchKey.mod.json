@@ -4,7 +4,7 @@
   "definition": {
     "triggerKey": "B",
     "keyBindingName": "Gm Switch Key",
-    "keyBindingCategoryKey": "mod",
+    "keyBindingCategoryKey": "hk400test",
     "onKeyPressed": {
       "name": "GmSwitchPress"
     },

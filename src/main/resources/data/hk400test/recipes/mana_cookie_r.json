@@ -1,0 +1,42 @@
+{
+  "group": "item_mana_cookie",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:cookie"
+    },
+    "1": {
+      "item": "minecraft:cookie"
+    },
+    "2": {
+      "item": "minecraft:cookie"
+    },
+    "3": {
+      "item": "minecraft:cookie"
+    },
+    "4": {
+      "item": "hk400test:infused_mana_stone"
+    },
+    "5": {
+      "item": "minecraft:cookie"
+    },
+    "6": {
+      "item": "minecraft:cookie"
+    },
+    "7": {
+      "item": "minecraft:cookie"
+    },
+    "8": {
+      "item": "minecraft:cookie"
+    }
+  },
+  "result": {
+    "item": "hk400test:mana_cookie",
+    "count": 8
+  }
+}

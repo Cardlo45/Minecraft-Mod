@@ -13,7 +13,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class SmallManaHealProcedure extends Hk400testModElements.ModElement {
 	public SmallManaHealProcedure(Hk400testModElements instance) {
-		super(instance, 38);
+		super(instance, 40);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

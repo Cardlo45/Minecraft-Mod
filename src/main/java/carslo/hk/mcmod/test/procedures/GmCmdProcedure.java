@@ -18,7 +18,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class GmCmdProcedure extends Hk400testModElements.ModElement {
 	public GmCmdProcedure(Hk400testModElements instance) {
-		super(instance, 14);
+		super(instance, 17);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

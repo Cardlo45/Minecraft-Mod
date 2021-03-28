@@ -58,7 +58,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 public class TestEntity extends Hk400testModElements.ModElement {
 	public static EntityType entity = null;
 	public TestEntity(Hk400testModElements instance) {
-		super(instance, 7);
+		super(instance, 9);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

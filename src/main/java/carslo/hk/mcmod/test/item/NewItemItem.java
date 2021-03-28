@@ -26,7 +26,7 @@ public class NewItemItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:new_item")
 	public static final Item block = null;
 	public NewItemItem(Hk400testModElements instance) {
-		super(instance, 5);
+		super(instance, 7);
 	}
 
 	@Override

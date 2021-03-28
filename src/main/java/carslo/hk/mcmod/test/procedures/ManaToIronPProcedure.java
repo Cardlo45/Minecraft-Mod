@@ -16,7 +16,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaToIronPProcedure extends Hk400testModElements.ModElement {
 	public ManaToIronPProcedure(Hk400testModElements instance) {
-		super(instance, 37);
+		super(instance, 39);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

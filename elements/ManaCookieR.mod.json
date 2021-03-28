@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "item_mana_cookie",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.COOKIE"
+      },
+      {
+        "value": "Items.COOKIE"
+      },
+      {
+        "value": "Items.COOKIE"
+      },
+      {
+        "value": "Items.COOKIE"
+      },
+      {
+        "value": "CUSTOM:InfusedManaStone"
+      },
+      {
+        "value": "Items.COOKIE"
+      },
+      {
+        "value": "Items.COOKIE"
+      },
+      {
+        "value": "Items.COOKIE"
+      },
+      {
+        "value": "Items.COOKIE"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:ManaCookie"
+    },
+    "name": "mana_cookie_r",
+    "namespace": "mod"
+  }
+}

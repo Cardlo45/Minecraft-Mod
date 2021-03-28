@@ -5,9 +5,9 @@
     "renderType": 1,
     "texture": "item_mana_sword",
     "customModelName": "_mana_sword:default",
-    "name": "Mana Schwert",
+    "name": "§3Mana Schwert",
     "specialInfo": [
-      "Nutze §320 Mana §rum ein Mana Projektil zuerschaffen das 10 Schaden macht"
+      "Nutze §320 Mana §rum ein §3Mana Projektil §rzu erschaffen das §c10 Schaden §rmacht"
     ],
     "creativeTab": {
       "value": "CUSTOM:OurItems"
@@ -17,7 +17,7 @@
       "value": ""
     },
     "shootConstantly": true,
-    "usageCount": 500,
+    "usageCount": 0,
     "actionSound": {
       "value": "block.barrel.open"
     },

@@ -1,5 +1,7 @@
 package carslo.hk.mcmod.test.procedures;
 
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
@@ -10,7 +12,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaSwordManaTestProcedure extends Hk400testModElements.ModElement {
 	public ManaSwordManaTestProcedure(Hk400testModElements instance) {
-		super(instance, 39);
+		super(instance, 41);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
@@ -20,6 +22,12 @@ public class ManaSwordManaTestProcedure extends Hk400testModElements.ModElement 
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new Hk400testModVariables.PlayerVariables())).mana) < 20)) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cDu hast nicht genug Mana"), (false));
+			}
+		}
 		return (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new Hk400testModVariables.PlayerVariables())).mana) >= 20);
 	}

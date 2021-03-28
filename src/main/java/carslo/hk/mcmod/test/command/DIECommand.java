@@ -23,7 +23,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class DIECommand extends Hk400testModElements.ModElement {
 	public DIECommand(Hk400testModElements instance) {
-		super(instance, 23);
+		super(instance, 26);
 	}
 
 	@Override

@@ -25,7 +25,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 public class ManaTrailParticle extends Hk400testModElements.ModElement {
 	public static final BasicParticleType particle = new BasicParticleType(false);
 	public ManaTrailParticle(Hk400testModElements instance) {
-		super(instance, 43);
+		super(instance, 44);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

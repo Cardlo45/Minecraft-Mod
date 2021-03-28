@@ -1,0 +1,37 @@
+{
+  "_fv": 13,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "item_manastone",
+    "customModelName": "Normal",
+    "name": "§3Mana Stein",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "CUSTOM:OurItems"
+    },
+    "stackSize": 32,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "Verbrauche §3100 Mana §rum diesen Stein aufzuladen"
+    ],
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "ManaStoneCharge"
+    }
+  }
+}

@@ -15,7 +15,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class DeathProcedure extends Hk400testModElements.ModElement {
 	public DeathProcedure(Hk400testModElements instance) {
-		super(instance, 22);
+		super(instance, 25);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

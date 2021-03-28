@@ -27,7 +27,7 @@ public class ManaCookieItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:mana_cookie")
 	public static final Item block = null;
 	public ManaCookieItem(Hk400testModElements instance) {
-		super(instance, 45);
+		super(instance, 5);
 	}
 
 	@Override

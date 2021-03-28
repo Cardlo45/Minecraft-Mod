@@ -70,7 +70,7 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:entitybulletmana_sword")
 	public static final EntityType arrow = null;
 	public ManaSwordItem(Hk400testModElements instance) {
-		super(instance, 39);
+		super(instance, 10);
 	}
 
 	@Override
@@ -88,7 +88,7 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(OurItemsItemGroup.tab).maxDamage(500));
+			super(new Item.Properties().group(OurItemsItemGroup.tab).maxStackSize(1));
 			setRegistryName("mana_sword");
 		}
 
@@ -101,7 +101,8 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Nutze \u00A7320 Mana \u00A7rum ein Mana Projektil zuerschaffen das 10 Schaden macht"));
+			list.add(new StringTextComponent(
+					"Nutze \u00A7320 Mana \u00A7rum ein \u00A73Mana Projektil \u00A7rzu erschaffen das \u00A7c10 Schaden \u00A7rmacht"));
 		}
 
 		@Override

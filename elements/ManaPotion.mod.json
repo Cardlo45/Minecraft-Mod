@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "item_mana_potion",
     "customModelName": "Normal",
-    "name": "Mana Potion",
+    "name": "§3Mana Potion",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:OurItems"
@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Heile 20% deiner Maximalen Mana"
+      "Heile §e20% §rdeiner §3Maximalen Mana"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

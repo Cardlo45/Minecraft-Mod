@@ -15,7 +15,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaCookieConsumedProcedure extends Hk400testModElements.ModElement {
 	public ManaCookieConsumedProcedure(Hk400testModElements instance) {
-		super(instance, 45);
+		super(instance, 46);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "item_mana_cookie",
     "customModelName": "Normal",
-    "name": "Mana Keks",
+    "name": "§3Mana Keks",
     "rarity": "COMMON",
     "specialInfo": [
       "Heile §35 Mana"

@@ -1,0 +1,37 @@
+{
+  "group": "item_manatoiron",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "hk400test:infused_mana_stone"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "tag": "minecraft:coals"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "result": {
+    "item": "hk400test:mana_to_iron",
+    "count": 1
+  }
+}
