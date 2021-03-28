@@ -37,7 +37,7 @@ public class ManaStoneItem extends Hk400testModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(OurItemsItemGroup.tab).maxStackSize(32).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(OurItemsItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("mana_stone");
 		}
 
