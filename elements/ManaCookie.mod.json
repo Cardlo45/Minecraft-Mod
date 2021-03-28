@@ -1,0 +1,31 @@
+{
+  "_fv": 13,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "item_mana_cookie",
+    "customModelName": "Normal",
+    "name": "Mana Keks",
+    "rarity": "COMMON",
+    "specialInfo": [
+      "Heile §35 Mana"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:OurItems"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatingSpeed": 12,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "ManaCookieConsumed"
+    }
+  }
+}

@@ -618,6 +618,32 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "mana_sword"
+    },
+    {
+      "name": "ManaCookie",
+      "type": "food",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mana_cookie"
+    },
+    {
+      "name": "ManaCookieConsumed",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mana_cookie_consumed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -640,6 +666,7 @@
       "item.hk400test.mana_potion": "Mana Potion",
       "item.hk400test.test_spawn_egg": "Some-Mount Spawn Egg",
       "advancements.upinthesky.title": "Rise",
+      "item.hk400test.mana_cookie": "Mana Keks",
       "death.attack.manasword.pro.player": "%1$s wurde von %2$s\u0027s Mana Klinge erschlagen",
       "itemGroup.tabour_items": "Mod Items",
       "key.mcreator.gm_switch_key": "Gm Switch Key",
