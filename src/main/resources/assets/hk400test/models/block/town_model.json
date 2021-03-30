@@ -1,0 +1,10 @@
+{
+  "parent": "hk400test:custom/model",
+  "textures": {
+    "all": "hk400test:blocks/block_model_3",
+    "particle": "hk400test:blocks/block_model_3",
+    "0": "hk400test:blocks/block_model_1",
+    "1": "hk400test:blocks/block_model_2",
+    "2": "hk400test:blocks/block_model_3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "block_model_1",
+        "1": "block_model_2",
+        "2": "block_model_3"
+      },
+      "name": "default"
+    }
+  }
+}
