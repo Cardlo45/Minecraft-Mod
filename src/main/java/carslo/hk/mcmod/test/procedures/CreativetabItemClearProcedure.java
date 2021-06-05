@@ -25,7 +25,8 @@ public class CreativetabItemClearProcedure extends Hk400testModElements.ModEleme
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof PlayerEntity) {
 			ItemStack _stktoremove = new ItemStack(CreativetabItem.block, (int) (1));
-			((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 999);
+			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 999,
+					((PlayerEntity) entity).container.func_234641_j_());
 		}
 	}
 }

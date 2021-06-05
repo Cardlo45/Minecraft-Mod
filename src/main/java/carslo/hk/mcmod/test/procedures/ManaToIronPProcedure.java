@@ -1,5 +1,6 @@
 package carslo.hk.mcmod.test.procedures;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.item.Items;
@@ -61,13 +62,13 @@ public class ManaToIronPProcedure extends Hk400testModElements.ModElement {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (!world.getWorld().isRemote) {
-				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.IRON_INGOT, (int) (1)));
+			if (world instanceof World && !world.isRemote()) {
+				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Items.IRON_INGOT, (int) (1)));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
 		} else {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cDu hast nicht genug Mana"), (false));
 			}
 		}

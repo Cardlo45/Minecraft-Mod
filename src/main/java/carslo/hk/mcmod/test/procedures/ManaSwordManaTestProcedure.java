@@ -25,7 +25,7 @@ public class ManaSwordManaTestProcedure extends Hk400testModElements.ModElement 
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new Hk400testModVariables.PlayerVariables())).mana) < 20)) {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cDu hast nicht genug Mana"), (false));
 			}
 		}

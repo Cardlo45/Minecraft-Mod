@@ -40,7 +40,8 @@ public class ManaStoneChargeProcedure extends Hk400testModElements.ModElement {
 			}
 			if (entity instanceof PlayerEntity) {
 				ItemStack _stktoremove = new ItemStack(ManaStoneItem.block, (int) (1));
-				((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+				((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+						((PlayerEntity) entity).container.func_234641_j_());
 			}
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = new ItemStack(InfusedManaStoneItem.block, (int) (1));
@@ -48,7 +49,7 @@ public class ManaStoneChargeProcedure extends Hk400testModElements.ModElement {
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 		} else {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cDu hast nicht genug Mana"), (false));
 			}
 		}

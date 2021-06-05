@@ -6,17 +6,15 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.World;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.Mirror;
@@ -26,12 +24,13 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.pathfinding.PathNodeType;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.client.util.ITooltipFlag;
@@ -78,7 +77,8 @@ public class TownModelBlock extends Hk400testModElements.ModElement {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.GLASS).hardnessAndResistance(0f, 10f).lightValue(0).notSolid());
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.GLASS).hardnessAndResistance(0f, 10f).setLightLevel(s -> 0).notSolid()
+					.setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(WATERLOGGED, false));
 			setRegistryName("town_model");
 		}
@@ -91,18 +91,13 @@ public class TownModelBlock extends Hk400testModElements.ModElement {
 		}
 
 		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
-		}
-
-		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
 		}
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			Vec3d offset = state.getOffset(world, pos);
+			Vector3d offset = state.getOffset(world, pos);
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
@@ -114,11 +109,6 @@ public class TownModelBlock extends Hk400testModElements.ModElement {
 				case WEST :
 					return VoxelShapes.or(makeCuboidShape(1.6, 0, 14.4, 14.4, 14.4, 1.6)).withOffset(offset.x, offset.y, offset.z);
 			}
-		}
-
-		@Override
-		public int tickRate(IWorldReader world) {
-			return 9999;
 		}
 
 		@Override
@@ -141,7 +131,7 @@ public class TownModelBlock extends Hk400testModElements.ModElement {
 		}
 
 		@Override
-		public IFluidState getFluidState(BlockState state) {
+		public FluidState getFluidState(BlockState state) {
 			return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
 		}
 
@@ -155,7 +145,7 @@ public class TownModelBlock extends Hk400testModElements.ModElement {
 		}
 
 		@Override
-		public MaterialColor getMaterialColor(BlockState state, IBlockReader blockAccess, BlockPos pos) {
+		public MaterialColor getMaterialColor() {
 			return MaterialColor.BROWN;
 		}
 

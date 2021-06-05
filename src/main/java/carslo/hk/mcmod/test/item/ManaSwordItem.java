@@ -5,8 +5,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.network.FMLPlayMessages;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -27,22 +26,15 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.client.renderer.entity.model.EntityModel;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
-import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.Vector3f;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.block.Blocks;
 
 import java.util.Random;
@@ -50,10 +42,8 @@ import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 
-import com.mojang.blaze3d.vertex.IVertexBuilder;
-import com.mojang.blaze3d.matrix.MatrixStack;
-
 import com.google.common.collect.Multimap;
+import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableMap;
 
 import carslo.hk.mcmod.test.procedures.ManaSwordRemoveManaProcedure;
@@ -61,6 +51,7 @@ import carslo.hk.mcmod.test.procedures.ManaSwordManaTestProcedure;
 import carslo.hk.mcmod.test.procedures.ManaSwordBulletParticleProcedure;
 import carslo.hk.mcmod.test.procedures.ManaSwordBulletHitProcedure;
 import carslo.hk.mcmod.test.itemgroup.OurItemsItemGroup;
+import carslo.hk.mcmod.test.entity.renderer.ManaSwordRenderer;
 import carslo.hk.mcmod.test.Hk400testModElements;
 
 @Hk400testModElements.ModElement.Tag
@@ -72,18 +63,13 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 			.size(0.5f, 0.5f)).build("entitybulletmana_sword").setRegistryName("entitybulletmana_sword");
 	public ManaSwordItem(Hk400testModElements instance) {
 		super(instance, 10);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ManaSwordRenderer.ModelRegisterHandler());
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemRanged());
 		elements.entities.add(() -> arrow);
-	}
-
-	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void init(FMLCommonSetupEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(arrow, renderManager -> new CustomRender(renderManager));
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
@@ -115,15 +101,17 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 		}
 
 		@Override
-		public Multimap<String, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot) {
-			Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot);
+		public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot) {
 			if (slot == EquipmentSlotType.MAINHAND) {
-				multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "ranged_item_damage", (double) 5, AttributeModifier.Operation.ADDITION));
-				multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
-						new AttributeModifier(ATTACK_SPEED_MODIFIER, "ranged_item_attack_speed", -2.4, AttributeModifier.Operation.ADDITION));
+				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+				builder.putAll(super.getAttributeModifiers(slot));
+				builder.put(Attributes.ATTACK_DAMAGE,
+						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Ranged item modifier", (double) 5, AttributeModifier.Operation.ADDITION));
+				builder.put(Attributes.ATTACK_SPEED,
+						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Ranged item modifier", -2.4, AttributeModifier.Operation.ADDITION));
+				return builder.build();
 			}
-			return multimap;
+			return super.getAttributeModifiers(slot);
 		}
 
 		@Override
@@ -186,7 +174,7 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 		@Override
 		public void onCollideWithPlayer(PlayerEntity entity) {
 			super.onCollideWithPlayer(entity);
-			Entity sourceentity = this.getShooter();
+			Entity sourceentity = this.func_234616_v_();
 			double x = this.getPosX();
 			double y = this.getPosY();
 			double z = this.getPosZ();
@@ -202,7 +190,7 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 		protected void arrowHit(LivingEntity entity) {
 			super.arrowHit(entity);
 			entity.setArrowCountInEntity(entity.getArrowCountInEntity() - 1);
-			Entity sourceentity = this.getShooter();
+			Entity sourceentity = this.func_234616_v_();
 			double x = this.getPosX();
 			double y = this.getPosY();
 			double z = this.getPosZ();
@@ -221,7 +209,7 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			World world = this.world;
-			Entity entity = this.getShooter();
+			Entity entity = this.func_234616_v_();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
@@ -233,66 +221,6 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 			if (this.inGround) {
 				this.remove();
 			}
-		}
-	}
-
-	public static class CustomRender extends EntityRenderer<ArrowCustomEntity> {
-		private static final ResourceLocation texture = new ResourceLocation("hk400test:textures/entity_manablade.png");
-		public CustomRender(EntityRendererManager renderManager) {
-			super(renderManager);
-		}
-
-		@Override
-		public void render(ArrowCustomEntity entityIn, float entityYaw, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn,
-				int packedLightIn) {
-			IVertexBuilder vb = bufferIn.getBuffer(RenderType.getEntityCutout(this.getEntityTexture(entityIn)));
-			matrixStackIn.push();
-			matrixStackIn.rotate(Vector3f.YP.rotationDegrees(MathHelper.lerp(partialTicks, entityIn.prevRotationYaw, entityIn.rotationYaw) - 90));
-			matrixStackIn.rotate(Vector3f.ZP.rotationDegrees(90 + MathHelper.lerp(partialTicks, entityIn.prevRotationPitch, entityIn.rotationPitch)));
-			EntityModel model = new Model_mana_sword();
-			model.render(matrixStackIn, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 0.0625f);
-			matrixStackIn.pop();
-			super.render(entityIn, entityYaw, partialTicks, matrixStackIn, bufferIn, packedLightIn);
-		}
-
-		@Override
-		public ResourceLocation getEntityTexture(ArrowCustomEntity entity) {
-			return texture;
-		}
-	}
-
-	// Made with Blockbench 3.7.1
-	// Exported for Minecraft version 1.15
-	// Paste this class into your mod and generate all required imports
-	public static class Model_mana_sword extends EntityModel<Entity> {
-		private final ModelRenderer bb_main;
-		private final ModelRenderer cube_r1;
-		public Model_mana_sword() {
-			textureWidth = 32;
-			textureHeight = 16;
-			bb_main = new ModelRenderer(this);
-			bb_main.setRotationPoint(0.0F, 24.0F, 0.0F);
-			cube_r1 = new ModelRenderer(this);
-			cube_r1.setRotationPoint(0.0F, -8.0F, 0.0F);
-			bb_main.addChild(cube_r1);
-			setRotationAngle(cube_r1, 0.7854F, 0.0F, 0.0F);
-			cube_r1.setTextureOffset(0, -16).addBox(0.0F, -8.0F, -8.0F, 0.0F, 16.0F, 16.0F, 0.0F, false);
-		}
-
-		@Override
-		public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue,
-				float alpha) {
-			bb_main.render(matrixStack, buffer, packedLight, packedOverlay);
-		}
-
-		public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
-			modelRenderer.rotateAngleX = x;
-			modelRenderer.rotateAngleY = y;
-			modelRenderer.rotateAngleZ = z;
-		}
-
-		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
-			this.bb_main.rotateAngleX = f2;
 		}
 	}
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {

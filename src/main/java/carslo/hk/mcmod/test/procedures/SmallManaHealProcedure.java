@@ -29,7 +29,8 @@ public class SmallManaHealProcedure extends Hk400testModElements.ModElement {
 						.orElse(new Hk400testModVariables.PlayerVariables())).maxmana))) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _stktoremove = new ItemStack(ManaPotionItem.block, (int) (1));
-				((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+				((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+						((PlayerEntity) entity).container.func_234641_j_());
 			}
 			{
 				double _setval = (double) (((entity.getCapability(Hk400testModVariables.PLAYER_VARIABLES_CAPABILITY, null)

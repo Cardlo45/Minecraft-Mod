@@ -53,23 +53,23 @@ public class DeathProcedure extends Hk400testModElements.ModElement {
 			}
 		}.getText()).contains("help"))) {
 			for (int index0 = 0; index0 < (int) (1); index0++) {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Death Command: {needed} [optional]"), (false));
 				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("help: Show this help Page"), (false));
 				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("help: /death help"), (false));
 				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("explode: Let soemthing explode"), (false));
 				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("explode: /death explode {count} {power} [{x} {y} {z}]"),
 							(false));
 				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(
 							new StringTextComponent(
 									"explode: Count: Number of Explosions, Power: Power of explosions (Vanilla handling), X;Y;Z: Coopdinates"),
@@ -94,7 +94,7 @@ public class DeathProcedure extends Hk400testModElements.ModElement {
 					return "";
 				}
 			}.getText())).length() <= 0)) {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Wrong Usage: use /death help for more Information."), (false));
 				}
 			} else {
@@ -124,7 +124,7 @@ public class DeathProcedure extends Hk400testModElements.ModElement {
 						return "";
 					}
 				}.getText())).length() <= 0)) {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Wrong Usage: use /death help for more Information."),
 								(false));
 					}
@@ -242,7 +242,7 @@ public class DeathProcedure extends Hk400testModElements.ModElement {
 										return "";
 									}
 								}.getText())).length() > 0)) {
-									if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+									if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 										((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("To many Arguments"), (false));
 									}
 								}
@@ -250,14 +250,14 @@ public class DeathProcedure extends Hk400testModElements.ModElement {
 						}
 					}
 					for (int index1 = 0; index1 < (int) ((count)); index1++) {
-						if (world instanceof World && !world.getWorld().isRemote) {
-							world.getWorld().createExplosion(null, (int) (x), (int) (y), (int) (z), (float) (power), Explosion.Mode.BREAK);
+						if (world instanceof World && !((World) world).isRemote) {
+							((World) world).createExplosion(null, (int) (x), (int) (y), (int) (z), (float) (power), Explosion.Mode.BREAK);
 						}
 					}
 				}
 			}
 		} else {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Wrong Usage: use /death help for more Information."), (false));
 			}
 		}

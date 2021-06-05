@@ -1,12 +1,13 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[36,)"
+license="All Rights Reserved"
 
 [[mods]]
 modId="hk400test"
-version="1.0.1"
+version="0.0.1"
 displayName="Henkiller400 Co-Op Test"
 credits="ToDo: add credits"
-displayURL="https://weside-in/future.ok"
+displayURL="https://weside-in/future.ok/?"
 authors="Carslo45, Henkiller400"
 description='''
 ToDo: add Description
@@ -15,7 +16,7 @@ ToDo: add Description
 [[dependencies.hk400test]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
 

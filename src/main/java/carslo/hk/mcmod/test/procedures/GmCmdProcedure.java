@@ -1,10 +1,11 @@
 package carslo.hk.mcmod.test.procedures;
 
 import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.Vec2f;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
@@ -71,7 +72,7 @@ public class GmCmdProcedure extends Hk400testModElements.ModElement {
 				return "";
 			}
 		}.getText())).length() <= 0)) {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Nutzung: '/gm {0,1,2,3} [Spieler]'"), (false));
 			}
 		} else {
@@ -94,7 +95,7 @@ public class GmCmdProcedure extends Hk400testModElements.ModElement {
 					}
 				}.getText()));
 			} else {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Nutzung: '/gm {0,1,2,3} [Spieler]'"), (false));
 				}
 			}
@@ -128,10 +129,10 @@ public class GmCmdProcedure extends Hk400testModElements.ModElement {
 			} else {
 				player = (String) (entity.getDisplayName().getString());
 			}
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						(("gamemode ") + "" + ((change)) + "" + (" ") + "" + ((player))));
 			}
 		}
