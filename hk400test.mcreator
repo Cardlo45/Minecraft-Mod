@@ -870,16 +870,13 @@
     "description": "ToDo: add Description",
     "author": "Carslo45, Henkiller400",
     "websiteURL": "https://weside-in/future.ok",
+    "license": "Not specified",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [
-      "just_enough_items",
-      "curios",
-      "patchouli"
-    ],
+    "mcreatorDependencies": [],
     "currentGenerator": "forge-1.15.2",
     "credits": "ToDo: add credits",
     "modElementsPackage": "carslo.hk.mcmod.test",

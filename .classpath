@@ -30,21 +30,6 @@
 	</classpathentry>
 	<classpathentry kind="output" path="bin/default"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
-	<classpathentry kind="lib" path="/home/Carslo45/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/mezz/jei/jei-1.15.2/6.0.2.12_mapped_snapshot_20200514-1.15.1/jei-1.15.2-6.0.2.12_mapped_snapshot_20200514-1.15.1-api.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value=""/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/Carslo45/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/top/theillusivec4/curios/curios/FORGE-1.15.2-2.0.2.4_mapped_snapshot_20200514-1.15.1/curios-FORGE-1.15.2-2.0.2.4_mapped_snapshot_20200514-1.15.1-api.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value=""/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/Carslo45/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/vazkii/patchouli/Patchouli/1.15.2-1.2-34.184_mapped_snapshot_20200514-1.15.1/Patchouli-1.15.2-1.2-34.184_mapped_snapshot_20200514-1.15.1-api.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value=""/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="/home/Carslo45/.mcreator/gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
@@ -406,21 +391,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="/home/Carslo45/.mcreator/gradle/caches/modules-2/files-2.1/org.jline/jline-terminal/3.12.1/3f3b61e6f3eafeba0c289b308926e0f93457140/jline-terminal-3.12.1-sources.jar" kind="lib" path="/home/Carslo45/.mcreator/gradle/caches/modules-2/files-2.1/org.jline/jline-terminal/3.12.1/c777448314e050d980a6b697c140f3bfe9eb7416/jline-terminal-3.12.1.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/Carslo45/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/mezz/jei/jei-1.15.2/6.0.2.12_mapped_snapshot_20200514-1.15.1/jei-1.15.2-6.0.2.12_mapped_snapshot_20200514-1.15.1.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/Carslo45/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/top/theillusivec4/curios/curios/FORGE-1.15.2-2.0.2.4_mapped_snapshot_20200514-1.15.1/curios-FORGE-1.15.2-2.0.2.4_mapped_snapshot_20200514-1.15.1.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/Carslo45/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/vazkii/patchouli/Patchouli/1.15.2-1.2-34.184_mapped_snapshot_20200514-1.15.1/Patchouli-1.15.2-1.2-34.184_mapped_snapshot_20200514-1.15.1.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
