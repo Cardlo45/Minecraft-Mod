@@ -2,19 +2,7 @@
 package carslo.hk.mcmod.test.block;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.items.wrapper.SidedInvWrapper;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fluids.capability.templates.FluidTank;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.energy.EnergyStorage;
-import net.minecraftforge.energy.CapabilityEnergy;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -31,32 +19,19 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Direction;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.LockableLootTileEntity;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.pathfinding.PathNodeType;
-import net.minecraft.network.play.server.SUpdateTileEntityPacket;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
-import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ChestContainer;
-import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.client.util.ITooltipFlag;
@@ -72,9 +47,6 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import javax.annotation.Nullable;
-
-import java.util.stream.IntStream;
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
@@ -87,22 +59,14 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 public class TownModelBlock extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:town_model")
 	public static final Block block = null;
-	@ObjectHolder("hk400test:town_model")
-	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public TownModelBlock(Hk400testModElements instance) {
 		super(instance, 60);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(OurItemsItemGroup.tab)).setRegistryName(block.getRegistryName()));
-	}
-
-	@SubscribeEvent
-	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("town_model"));
 	}
 
 	@Override
@@ -140,17 +104,15 @@ public class TownModelBlock extends Hk400testModElements.ModElement {
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vec3d offset = state.getOffset(world, pos);
 			switch ((Direction) state.get(FACING)) {
-				case UP :
-				case DOWN :
 				case SOUTH :
 				default :
-					return VoxelShapes.create(0.9D, 0D, 0.9D, 0.1D, 0.9D, 0.1D).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(14.4, 0, 14.4, 1.6, 14.4, 1.6)).withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.create(0.1D, 0D, 0.1D, 0.9D, 0.9D, 0.9D).withOffset(offset.x, offset.y, offset.z);
-				case WEST :
-					return VoxelShapes.create(0.1D, 0D, 0.9D, 0.9D, 0.9D, 0.1D).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(1.6, 0, 1.6, 14.4, 14.4, 14.4)).withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.create(0.9D, 0D, 0.1D, 0.1D, 0.9D, 0.9D).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(14.4, 0, 1.6, 1.6, 14.4, 14.4)).withOffset(offset.x, offset.y, offset.z);
+				case WEST :
+					return VoxelShapes.or(makeCuboidShape(1.6, 0, 14.4, 14.4, 14.4, 1.6)).withOffset(offset.x, offset.y, offset.z);
 			}
 		}
 
@@ -224,191 +186,12 @@ public class TownModelBlock extends Hk400testModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			if (true)
-				for (int l = 0; l < 4; ++l) {
-					double d0 = (x + 0.5) + (random.nextFloat() - 0.5) * 0.5D * 20;
-					double d1 = ((y + 0.7) + (random.nextFloat() - 0.5) * 0.5D) + 0.5;
-					double d2 = (z + 0.5) + (random.nextFloat() - 0.5) * 0.5D * 20;
+				for (int l = 0; l < 5; ++l) {
+					double d0 = (x + 0.5) + (random.nextFloat() - 0.5) * 1.5D * 20;
+					double d1 = ((y + 0.7) + (random.nextFloat() - 0.5) * 1.5D) + 0.5;
+					double d2 = (z + 0.5) + (random.nextFloat() - 0.5) * 1.5D * 20;
 					world.addParticle(ManaTrailParticle.particle, d0, d1, d2, 0, 0, 0);
 				}
-		}
-
-		@Override
-		public INamedContainerProvider getContainer(BlockState state, World worldIn, BlockPos pos) {
-			TileEntity tileEntity = worldIn.getTileEntity(pos);
-			return tileEntity instanceof INamedContainerProvider ? (INamedContainerProvider) tileEntity : null;
-		}
-
-		@Override
-		public boolean hasTileEntity(BlockState state) {
-			return true;
-		}
-
-		@Override
-		public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-			return new CustomTileEntity();
-		}
-
-		@Override
-		public boolean eventReceived(BlockState state, World world, BlockPos pos, int eventID, int eventParam) {
-			super.eventReceived(state, world, pos, eventID, eventParam);
-			TileEntity tileentity = world.getTileEntity(pos);
-			return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
-		}
-	}
-
-	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
-		protected CustomTileEntity() {
-			super(tileEntityType);
-		}
-
-		@Override
-		public void read(CompoundNBT compound) {
-			super.read(compound);
-			if (!this.checkLootAndRead(compound)) {
-				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
-			}
-			ItemStackHelper.loadAllItems(compound, this.stacks);
-			if (compound.get("energyStorage") != null)
-				CapabilityEnergy.ENERGY.readNBT(energyStorage, null, compound.get("energyStorage"));
-			if (compound.get("fluidTank") != null)
-				CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY.readNBT(fluidTank, null, compound.get("fluidTank"));
-		}
-
-		@Override
-		public CompoundNBT write(CompoundNBT compound) {
-			super.write(compound);
-			if (!this.checkLootAndWrite(compound)) {
-				ItemStackHelper.saveAllItems(compound, this.stacks);
-			}
-			compound.put("energyStorage", CapabilityEnergy.ENERGY.writeNBT(energyStorage, null));
-			compound.put("fluidTank", CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY.writeNBT(fluidTank, null));
-			return compound;
-		}
-
-		@Override
-		public SUpdateTileEntityPacket getUpdatePacket() {
-			return new SUpdateTileEntityPacket(this.pos, 0, this.getUpdateTag());
-		}
-
-		@Override
-		public CompoundNBT getUpdateTag() {
-			return this.write(new CompoundNBT());
-		}
-
-		@Override
-		public void onDataPacket(NetworkManager net, SUpdateTileEntityPacket pkt) {
-			this.read(pkt.getNbtCompound());
-		}
-
-		@Override
-		public int getSizeInventory() {
-			return stacks.size();
-		}
-
-		@Override
-		public boolean isEmpty() {
-			for (ItemStack itemstack : this.stacks)
-				if (!itemstack.isEmpty())
-					return false;
-			return true;
-		}
-
-		@Override
-		public ITextComponent getDefaultName() {
-			return new StringTextComponent("town_model");
-		}
-
-		@Override
-		public int getInventoryStackLimit() {
-			return 1;
-		}
-
-		@Override
-		public Container createMenu(int id, PlayerInventory player) {
-			return ChestContainer.createGeneric9X3(id, player, this);
-		}
-
-		@Override
-		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Stadt Model");
-		}
-
-		@Override
-		protected NonNullList<ItemStack> getItems() {
-			return this.stacks;
-		}
-
-		@Override
-		protected void setItems(NonNullList<ItemStack> stacks) {
-			this.stacks = stacks;
-		}
-
-		@Override
-		public boolean isItemValidForSlot(int index, ItemStack stack) {
-			return true;
-		}
-
-		@Override
-		public int[] getSlotsForFace(Direction side) {
-			return IntStream.range(0, this.getSizeInventory()).toArray();
-		}
-
-		@Override
-		public boolean canInsertItem(int index, ItemStack stack, @Nullable Direction direction) {
-			return this.isItemValidForSlot(index, stack);
-		}
-
-		@Override
-		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
-			return true;
-		}
-		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
-		private final EnergyStorage energyStorage = new EnergyStorage(9999999, 10000, 10000, 9999999) {
-			@Override
-			public int receiveEnergy(int maxReceive, boolean simulate) {
-				int retval = super.receiveEnergy(maxReceive, simulate);
-				if (!simulate) {
-					markDirty();
-					world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos), 2);
-				}
-				return retval;
-			}
-
-			@Override
-			public int extractEnergy(int maxExtract, boolean simulate) {
-				int retval = super.extractEnergy(maxExtract, simulate);
-				if (!simulate) {
-					markDirty();
-					world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos), 2);
-				}
-				return retval;
-			}
-		};
-		private final FluidTank fluidTank = new FluidTank(999000) {
-			@Override
-			protected void onContentsChanged() {
-				super.onContentsChanged();
-				markDirty();
-				world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos), 2);
-			}
-		};
-		@Override
-		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
-			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
-				return handlers[facing.ordinal()].cast();
-			if (!this.removed && capability == CapabilityEnergy.ENERGY)
-				return LazyOptional.of(() -> energyStorage).cast();
-			if (!this.removed && capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY)
-				return LazyOptional.of(() -> fluidTank).cast();
-			return super.getCapability(capability, facing);
-		}
-
-		@Override
-		public void remove() {
-			super.remove();
-			for (LazyOptional<? extends IItemHandler> handler : handlers)
-				handler.invalidate();
 		}
 	}
 }

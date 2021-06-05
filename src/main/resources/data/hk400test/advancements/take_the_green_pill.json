@@ -16,12 +16,7 @@
   },
   "criteria": {
     "take_the_green_pill": {
-      "trigger": "minecraft:consume_item",
-      "conditions": {
-        "item": {
-          "item": "hk400test:old_item"
-        }
-      }
+      "trigger": "minecraft:impossible"
     }
   },
   "rewards": {

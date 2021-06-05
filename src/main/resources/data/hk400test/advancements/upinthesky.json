@@ -24,7 +24,7 @@
             "item": "hk400test:new_item",
             "count": {
               "min": 1,
-              "max": 999
+              "max": 9999
             }
           }
         ]

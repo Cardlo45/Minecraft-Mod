@@ -18,6 +18,7 @@ import java.util.Iterator;
 import java.util.HashMap;
 
 import carslo.hk.mcmod.test.Hk400testModElements;
+import carslo.hk.mcmod.test.Hk400testMod;
 
 @Hk400testModElements.ModElement.Tag
 public class AllTheArrowsTProcedure extends Hk400testModElements.ModElement {
@@ -29,7 +30,7 @@ public class AllTheArrowsTProcedure extends Hk400testModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure AllTheArrowsT!");
+				Hk400testMod.LOGGER.warn("Failed to load dependency entity for procedure AllTheArrowsT!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

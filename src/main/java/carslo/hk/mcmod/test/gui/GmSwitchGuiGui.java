@@ -1,8 +1,6 @@
 
 package carslo.hk.mcmod.test.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.fml.network.NetworkEvent;
@@ -32,6 +30,8 @@ import net.minecraft.client.Minecraft;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
 
 import carslo.hk.mcmod.test.procedures.GmSurvivalProcedure;
 import carslo.hk.mcmod.test.procedures.GmSpectatorProcedure;
@@ -124,12 +124,15 @@ public class GmSwitchGuiGui extends Hk400testModElements.ModElement {
 		}
 
 		@Override
-		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1, 1, 1, 1);
+		protected void drawGuiContainerBackgroundLayer(float partialTicks, int gx, int gy) {
+			RenderSystem.color4f(1, 1, 1, 1);
+			RenderSystem.enableBlend();
+			RenderSystem.defaultBlendFunc();
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
 			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+			RenderSystem.disableBlend();
 		}
 
 		@Override
@@ -162,20 +165,28 @@ public class GmSwitchGuiGui extends Hk400testModElements.ModElement {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
 			this.addButton(new Button(this.guiLeft + 5, this.guiTop + 15, 105, 20, "Überlebens Modus", e -> {
-				Hk400testMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
-				handleButtonAction(entity, 0, x, y, z);
+				if (true) {
+					Hk400testMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
+					handleButtonAction(entity, 0, x, y, z);
+				}
 			}));
 			this.addButton(new Button(this.guiLeft + 130, this.guiTop + 14, 90, 20, "Kreativ Modus", e -> {
-				Hk400testMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
-				handleButtonAction(entity, 1, x, y, z);
+				if (true) {
+					Hk400testMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
+					handleButtonAction(entity, 1, x, y, z);
+				}
 			}));
 			this.addButton(new Button(this.guiLeft + 5, this.guiTop + 38, 100, 20, "Abenteuer Modus", e -> {
-				Hk400testMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
-				handleButtonAction(entity, 2, x, y, z);
+				if (true) {
+					Hk400testMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
+					handleButtonAction(entity, 2, x, y, z);
+				}
 			}));
 			this.addButton(new Button(this.guiLeft + 119, this.guiTop + 37, 100, 20, "Zuschauer Modus", e -> {
-				Hk400testMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
-				handleButtonAction(entity, 3, x, y, z);
+				if (true) {
+					Hk400testMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
+					handleButtonAction(entity, 3, x, y, z);
+				}
 			}));
 		}
 	}

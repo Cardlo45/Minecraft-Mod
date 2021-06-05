@@ -67,8 +67,9 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 public class ManaSwordItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:mana_sword")
 	public static final Item block = null;
-	@ObjectHolder("hk400test:entitybulletmana_sword")
-	public static final EntityType arrow = null;
+	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
+			.size(0.5f, 0.5f)).build("entitybulletmana_sword").setRegistryName("entitybulletmana_sword");
 	public ManaSwordItem(Hk400testModElements instance) {
 		super(instance, 10);
 	}
@@ -76,9 +77,7 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemRanged());
-		elements.entities.add(() -> (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
-				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-				.size(0.5f, 0.5f)).build("entitybulletmana_sword").setRegistryName("entitybulletmana_sword"));
+		elements.entities.add(() -> arrow);
 	}
 
 	@Override

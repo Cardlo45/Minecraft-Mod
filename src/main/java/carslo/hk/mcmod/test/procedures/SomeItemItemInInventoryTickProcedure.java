@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 import java.util.Map;
 
 import carslo.hk.mcmod.test.Hk400testModElements;
+import carslo.hk.mcmod.test.Hk400testMod;
 
 @Hk400testModElements.ModElement.Tag
 public class SomeItemItemInInventoryTickProcedure extends Hk400testModElements.ModElement {
@@ -17,7 +18,7 @@ public class SomeItemItemInInventoryTickProcedure extends Hk400testModElements.M
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure SomeItemItemInInventoryTick!");
+				Hk400testMod.LOGGER.warn("Failed to load dependency entity for procedure SomeItemItemInInventoryTick!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

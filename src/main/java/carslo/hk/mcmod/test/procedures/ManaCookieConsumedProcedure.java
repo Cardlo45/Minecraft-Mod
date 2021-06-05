@@ -11,6 +11,7 @@ import java.util.Map;
 import carslo.hk.mcmod.test.item.ManaCookieItem;
 import carslo.hk.mcmod.test.Hk400testModVariables;
 import carslo.hk.mcmod.test.Hk400testModElements;
+import carslo.hk.mcmod.test.Hk400testMod;
 
 @Hk400testModElements.ModElement.Tag
 public class ManaCookieConsumedProcedure extends Hk400testModElements.ModElement {
@@ -21,7 +22,7 @@ public class ManaCookieConsumedProcedure extends Hk400testModElements.ModElement
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure ManaCookieConsumed!");
+				Hk400testMod.LOGGER.warn("Failed to load dependency entity for procedure ManaCookieConsumed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

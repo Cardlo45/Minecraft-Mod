@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 import carslo.hk.mcmod.test.Hk400testModElements;
+import carslo.hk.mcmod.test.Hk400testMod;
 
 @Hk400testModElements.ModElement.Tag
 public class DeathProcedure extends Hk400testModElements.ModElement {
@@ -21,17 +22,17 @@ public class DeathProcedure extends Hk400testModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure Death!");
+				Hk400testMod.LOGGER.warn("Failed to load dependency entity for procedure Death!");
 			return;
 		}
 		if (dependencies.get("cmdparams") == null) {
 			if (!dependencies.containsKey("cmdparams"))
-				System.err.println("Failed to load dependency cmdparams for procedure Death!");
+				Hk400testMod.LOGGER.warn("Failed to load dependency cmdparams for procedure Death!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure Death!");
+				Hk400testMod.LOGGER.warn("Failed to load dependency world for procedure Death!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

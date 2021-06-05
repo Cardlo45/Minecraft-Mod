@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 18,
   "_type": "particle",
   "definition": {
     "texture": "particle_mana_trail.png",
@@ -12,6 +12,8 @@
     "gravity": 0.0,
     "maxAge": 10,
     "maxAgeDiff": 2,
+    "angularVelocity": 0.0,
+    "angularAcceleration": 0.0,
     "canCollide": true,
     "alwaysShow": false,
     "renderType": "TRANSLUCENT"

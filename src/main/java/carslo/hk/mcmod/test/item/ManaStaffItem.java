@@ -63,8 +63,9 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 public class ManaStaffItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:mana_staff")
 	public static final Item block = null;
-	@ObjectHolder("hk400test:entitybulletmana_staff")
-	public static final EntityType arrow = null;
+	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
+			.size(0.5f, 0.5f)).build("entitybulletmana_staff").setRegistryName("entitybulletmana_staff");
 	public ManaStaffItem(Hk400testModElements instance) {
 		super(instance, 59);
 	}
@@ -72,9 +73,7 @@ public class ManaStaffItem extends Hk400testModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemRanged());
-		elements.entities.add(() -> (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
-				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-				.size(0.5f, 0.5f)).build("entitybulletmana_staff").setRegistryName("entitybulletmana_staff"));
+		elements.entities.add(() -> arrow);
 	}
 
 	@Override

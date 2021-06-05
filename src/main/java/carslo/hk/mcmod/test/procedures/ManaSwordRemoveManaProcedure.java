@@ -6,6 +6,7 @@ import java.util.Map;
 
 import carslo.hk.mcmod.test.Hk400testModVariables;
 import carslo.hk.mcmod.test.Hk400testModElements;
+import carslo.hk.mcmod.test.Hk400testMod;
 
 @Hk400testModElements.ModElement.Tag
 public class ManaSwordRemoveManaProcedure extends Hk400testModElements.ModElement {
@@ -16,7 +17,7 @@ public class ManaSwordRemoveManaProcedure extends Hk400testModElements.ModElemen
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure ManaSwordRemoveMana!");
+				Hk400testMod.LOGGER.warn("Failed to load dependency entity for procedure ManaSwordRemoveMana!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

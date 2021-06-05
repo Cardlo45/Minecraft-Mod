@@ -41,7 +41,7 @@ public class GmSwitchKeyKeyBinding extends Hk400testModElements.ModElement {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.mcreator.gm_switch_key", GLFW.GLFW_KEY_B, "key.categories.hk400test");
+		keys = new KeyBinding("key.hk400test.gm_switch_key", GLFW.GLFW_KEY_B, "key.categories.hk400test");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

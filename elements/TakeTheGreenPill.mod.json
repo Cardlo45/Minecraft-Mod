@@ -1,9 +1,9 @@
 {
-  "_fv": 13,
+  "_fv": 18,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Nim die Normale Pille",
-    "achievementDescription": "Consumiere den Normalisator",
+    "achievementName": "Zurück zu den Anfängen",
+    "achievementDescription": "Normalität is doch gut oder?\\nConsumiere den Normalisator",
     "achievementIcon": {
       "value": "CUSTOM:OldItem"
     },
@@ -20,6 +20,6 @@
     "parent": {
       "value": "CUSTOM:Upinthesky"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_consumed\" x=\"171\" y=\"107\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:OldItem</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"72\" y=\"76\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }
