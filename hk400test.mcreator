@@ -721,7 +721,11 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "just_enough_items",
+      "curios",
+      "patchouli"
+    ],
     "currentGenerator": "forge-1.16.5",
     "credits": "ToDo: add credits",
     "modElementsPackage": "carslo.hk.mcmod.test",
