@@ -56,7 +56,7 @@ public class ManaStaffItem extends Hk400testModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletmana_staff").setRegistryName("entitybulletmana_staff");
 	public ManaStaffItem(Hk400testModElements instance) {
-		super(instance, 59);
+		super(instance, 4);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ManaStaffRenderer.ModelRegisterHandler());
 	}
 
@@ -81,7 +81,7 @@ public class ManaStaffItem extends Hk400testModElements.ModElement {
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent(
-					"Nutze \u00A7320Mana \u00A7rum einen \u00A73Mana Ball \u00A7rzu erzeugen der \u00A7c10 Schaden \u00A7rmacht"));
+					"Nutze \u00A7320 Mana \u00A7rum einen \u00A73Mana Ball \u00A7rzu erzeugen der \u00A7c10 Schaden \u00A7rmacht"));
 		}
 
 		@Override

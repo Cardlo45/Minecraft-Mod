@@ -59,7 +59,7 @@ public class TownModelBlock extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:town_model")
 	public static final Block block = null;
 	public TownModelBlock(Hk400testModElements instance) {
-		super(instance, 60);
+		super(instance, 1);
 	}
 
 	@Override

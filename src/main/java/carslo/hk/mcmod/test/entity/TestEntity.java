@@ -62,7 +62,7 @@ public class TestEntity extends Hk400testModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(1.7f, 1.7f)).build("test").setRegistryName("test");
 	public TestEntity(Hk400testModElements instance) {
-		super(instance, 9);
+		super(instance, 10);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TestRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

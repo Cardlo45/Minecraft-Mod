@@ -25,7 +25,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class DIECommand extends Hk400testModElements.ModElement {
 	public DIECommand(Hk400testModElements instance) {
-		super(instance, 26);
+		super(instance, 17);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

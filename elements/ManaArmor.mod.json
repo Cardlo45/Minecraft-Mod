@@ -1,0 +1,78 @@
+{
+  "_fv": 18,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "mana_helmet",
+    "enableBody": true,
+    "textureBody": "mana_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "mana_leggings",
+    "enableBoots": true,
+    "textureBoots": "mana_boots",
+    "creativeTab": {
+      "value": "CUSTOM:OurItems"
+    },
+    "armorTextureFile": "mana",
+    "helmetName": "§3Reiner Mana Helm",
+    "bodyName": "§3Reine Mana Brustplatte",
+    "leggingsName": "§3Reine Mana Hose",
+    "bootsName": "§3Reine Mana Schuhe",
+    "helmetSpecialInfo": [
+      "Ein Helm, Geschmiedet aus Reinem §3Mana",
+      "§6Set Bonus:",
+      "§2+100% §3Mana Regeneration",
+      "§2-100% §3Mana Entzug §rbei §3Mana Überfluß"
+    ],
+    "bodySpecialInfo": [
+      "Eine Brustplatte, Geschmiedet aus Reinem §3Mana",
+      "§6Set Bonus:",
+      "§2+100% §3Mana Regeneration",
+      "§2-100% §3Mana Entzug §rbei §3Mana Überfluß"
+    ],
+    "leggingsSpecialInfo": [
+      "Eine Hose, Geschmiedet aus Reinem §3Mana",
+      "§6Set Bonus:",
+      "§2+100% §3Mana Regeneration",
+      "§2-100% §3Mana Entzug §rbei §3Mana Überfluß"
+    ],
+    "bootsSpecialInfo": [
+      "Schuhe, Geschmiedet aus Reinem §3Mana",
+      "§6Set Bonus:",
+      "§2+100% §3Mana Regeneration",
+      "§2-100% §3Mana Entzug §rbei §3Mana Überfluß"
+    ],
+    "helmetModelName": "Model_mana_armor",
+    "helmetModelPart": "Armor_Head",
+    "helmetModelTexture": "2debug_64-64.png",
+    "bodyModelName": "Model_mana_armor",
+    "bodyModelPart": "Armor_Body_Main",
+    "armsModelPartL": "Armor_L_Arm",
+    "armsModelPartR": "Armor_R_Arm",
+    "bodyModelTexture": "2debug_64-64.png",
+    "leggingsModelName": "Model_mana_armor",
+    "leggingsModelPartL": "Armor_L_Leg",
+    "leggingsModelPartR": "Armor_R_Leg",
+    "leggingsModelTexture": "2debug_64-64.png",
+    "bootsModelName": "Model_mana_armor",
+    "bootsModelPartL": "Armor_L_Boots",
+    "bootsModelPartR": "Armor_R_Boots",
+    "bootsModelTexture": "2debug_64-64.png",
+    "maxDamage": 25,
+    "damageValueHelmet": 1,
+    "damageValueBody": 1,
+    "damageValueLeggings": 1,
+    "damageValueBoots": 1,
+    "enchantability": 9,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_diamond"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:InfusedManaStone"
+      }
+    ]
+  }
+}

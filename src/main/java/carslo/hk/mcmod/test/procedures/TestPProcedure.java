@@ -7,7 +7,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class TestPProcedure extends Hk400testModElements.ModElement {
 	public TestPProcedure(Hk400testModElements instance) {
-		super(instance, 61);
+		super(instance, 48);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -13,7 +13,7 @@ import carslo.hk.mcmod.test.Hk400testMod;
 @Hk400testModElements.ModElement.Tag
 public class CreativetabItemClearProcedure extends Hk400testModElements.ModElement {
 	public CreativetabItemClearProcedure(Hk400testModElements instance) {
-		super(instance, 23);
+		super(instance, 15);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

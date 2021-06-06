@@ -11,7 +11,7 @@ import carslo.hk.mcmod.test.Hk400testMod;
 @Hk400testModElements.ModElement.Tag
 public class CloseGuiProcedure extends Hk400testModElements.ModElement {
 	public CloseGuiProcedure(Hk400testModElements instance) {
-		super(instance, 33);
+		super(instance, 24);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

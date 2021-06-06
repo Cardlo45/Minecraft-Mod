@@ -12,7 +12,7 @@ import carslo.hk.mcmod.test.Hk400testMod;
 @Hk400testModElements.ModElement.Tag
 public class ManaStaffBulletHitProcedure extends Hk400testModElements.ModElement {
 	public ManaStaffBulletHitProcedure(Hk400testModElements instance) {
-		super(instance, 59);
+		super(instance, 47);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

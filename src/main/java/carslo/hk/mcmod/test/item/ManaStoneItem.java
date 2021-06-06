@@ -28,7 +28,7 @@ public class ManaStoneItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:mana_stone")
 	public static final Item block = null;
 	public ManaStoneItem(Hk400testModElements instance) {
-		super(instance, 2);
+		super(instance, 7);
 	}
 
 	@Override

@@ -4,7 +4,7 @@
     {
       "name": "Test",
       "type": "mob",
-      "sortid": 9,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -13,7 +13,7 @@
     {
       "name": "Gm",
       "type": "command",
-      "sortid": 16,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -22,7 +22,7 @@
     {
       "name": "GmCmd",
       "type": "procedure",
-      "sortid": 17,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -59,7 +59,7 @@
     {
       "name": "OurItems",
       "type": "tab",
-      "sortid": 20,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -68,7 +68,7 @@
     {
       "name": "Creativetab",
       "type": "item",
-      "sortid": 21,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -77,7 +77,7 @@
     {
       "name": "CreativetabItemClear",
       "type": "procedure",
-      "sortid": 23,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -94,7 +94,7 @@
     {
       "name": "Death",
       "type": "procedure",
-      "sortid": 25,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -119,7 +119,7 @@
     {
       "name": "DIE",
       "type": "command",
-      "sortid": 26,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -128,7 +128,7 @@
     {
       "name": "GmSurvival",
       "type": "procedure",
-      "sortid": 27,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -145,7 +145,7 @@
     {
       "name": "GmCreative",
       "type": "procedure",
-      "sortid": 28,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -162,7 +162,7 @@
     {
       "name": "GmAdventure",
       "type": "procedure",
-      "sortid": 29,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -179,7 +179,7 @@
     {
       "name": "GmSpectator",
       "type": "procedure",
-      "sortid": 30,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -196,7 +196,7 @@
     {
       "name": "GmSwitchGui",
       "type": "gui",
-      "sortid": 31,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -205,7 +205,7 @@
     {
       "name": "GmSwitchPress",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -238,7 +238,7 @@
     {
       "name": "CloseGui",
       "type": "procedure",
-      "sortid": 33,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -255,7 +255,7 @@
     {
       "name": "GmSwitchKey",
       "type": "keybind",
-      "sortid": 34,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -264,7 +264,7 @@
     {
       "name": "ManaTick",
       "type": "procedure",
-      "sortid": 35,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -281,7 +281,7 @@
     {
       "name": "ManaCmd",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -302,7 +302,7 @@
     {
       "name": "Mana",
       "type": "command",
-      "sortid": 37,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -311,7 +311,7 @@
     {
       "name": "ManaDisplay",
       "type": "overlay",
-      "sortid": 38,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -320,7 +320,7 @@
     {
       "name": "ManaToIron",
       "type": "item",
-      "sortid": 3,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -329,7 +329,7 @@
     {
       "name": "ManaToIronP",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -362,7 +362,7 @@
     {
       "name": "ManaPotion",
       "type": "item",
-      "sortid": 4,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -371,7 +371,7 @@
     {
       "name": "SmallManaHeal",
       "type": "procedure",
-      "sortid": 40,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -388,7 +388,7 @@
     {
       "name": "ManaSwordManaTest",
       "type": "procedure",
-      "sortid": 41,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -406,7 +406,7 @@
     {
       "name": "ManaSwordRemoveMana",
       "type": "procedure",
-      "sortid": 42,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -423,7 +423,7 @@
     {
       "name": "ManaSwordBulletHit",
       "type": "procedure",
-      "sortid": 43,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -440,7 +440,7 @@
     {
       "name": "ManaTrail",
       "type": "particle",
-      "sortid": 44,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -449,7 +449,7 @@
     {
       "name": "ManaSwordBulletParticle",
       "type": "procedure",
-      "sortid": 45,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -478,7 +478,7 @@
     {
       "name": "ManaSword",
       "type": "gun",
-      "sortid": 10,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -487,7 +487,7 @@
     {
       "name": "ManaCookie",
       "type": "food",
-      "sortid": 5,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -496,7 +496,7 @@
     {
       "name": "ManaCookieConsumed",
       "type": "procedure",
-      "sortid": 46,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -513,7 +513,7 @@
     {
       "name": "InfusedManaStone",
       "type": "item",
-      "sortid": 1,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -522,7 +522,7 @@
     {
       "name": "ManaStone",
       "type": "item",
-      "sortid": 2,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -531,7 +531,7 @@
     {
       "name": "ManaStoneCharge",
       "type": "procedure",
-      "sortid": 47,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -548,7 +548,7 @@
     {
       "name": "ManaSwordR",
       "type": "recipe",
-      "sortid": 48,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -557,7 +557,7 @@
     {
       "name": "ManaStoneR",
       "type": "recipe",
-      "sortid": 49,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -566,7 +566,7 @@
     {
       "name": "ManaPotionR",
       "type": "recipe",
-      "sortid": 50,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -575,7 +575,7 @@
     {
       "name": "ManaCookieR",
       "type": "recipe",
-      "sortid": 51,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -584,34 +584,16 @@
     {
       "name": "ManaToIronR",
       "type": "recipe",
-      "sortid": 52,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "mana_to_iron_r"
     },
     {
-      "name": "TakeTheGreenPill",
-      "type": "achievement",
-      "sortid": 53,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "take_the_green_pill"
-    },
-    {
-      "name": "SomeAdvancement",
-      "type": "achievement",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "some_advancement"
-    },
-    {
       "name": "Cheater",
       "type": "achievement",
-      "sortid": 58,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -620,7 +602,7 @@
     {
       "name": "ManaStaffBulletHit",
       "type": "procedure",
-      "sortid": 59,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -637,7 +619,7 @@
     {
       "name": "ManaStaff",
       "type": "gun",
-      "sortid": 59,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -646,7 +628,7 @@
     {
       "name": "TownModel",
       "type": "block",
-      "sortid": 60,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -655,13 +637,28 @@
     {
       "name": "TestP",
       "type": "procedure",
-      "sortid": 61,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "test_p",
       "metadata": {
         "dependencies": []
+      }
+    },
+    {
+      "name": "ManaArmor",
+      "type": "armor",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mana_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
       }
     }
   ],
@@ -682,28 +679,28 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.hk400test.test_spawn_egg": "Some-Mount Spawn Egg",
-      "advancements.some_advancement.descr": "Pass auf das du dich nicht Stichst,\\nErhalte einen Dornenpfeil",
-      "advancements.take_the_green_pill.title": "Zurück zu den Anfängen",
-      "advancements.cheater.descr": "Bekomm den Verschwindenen Gegenstand",
-      "item.hk400test.mana_staff": "Mana Stab",
-      "item.hk400test.mana_to_iron": "Mana To Iron",
-      "item.hk400test.mana_stone": "§3Mana Stein",
-      "advancements.take_the_green_pill.descr": "Normalität is doch gut oder?\\nConsumiere den Normalisator",
       "item.hk400test.mana_potion": "§3Mana Potion",
+      "item.hk400test.test_spawn_egg": "Some-Mount Spawn Egg",
       "item.hk400test.mana_cookie": "§3Mana Keks",
       "death.attack.manasword.pro.player": "%1$s wurde von %2$s\u0027s Mana Klinge erschlagen",
       "itemGroup.tabour_items": "Mod Items",
+      "advancements.cheater.descr": "Bekomm den Verschwindenen Gegenstand",
       "key.mcreator.gm_switch_key": "Gm Switch Key",
       "key.hk400test.gm_switch_key": "Gm Switch Key",
+      "item.hk400test.mana_armor_boots": "§3Reine Mana Schuhe",
+      "item.hk400test.mana_staff": "§3Mana Stab",
       "item.hk400test.mana_sword": "§3Mana Schwert",
       "advancements.cheater.title": "Schummler",
       "death.attack.manastaff.pro.player": "%1$s wurde von %2$s\u0027s Mana ball getötet",
+      "item.hk400test.mana_to_iron": "Mana To Iron",
       "item.hk400test.infused_mana_stone": "§6Aufgeladener §3Mana Stein",
+      "item.hk400test.mana_armor_leggings": "§3Reine Mana Hose",
+      "item.hk400test.mana_stone": "§3Mana Stein",
       "key.categories.hk400test": "Henkiller400 Test Tasten belegung",
+      "item.hk400test.mana_armor_chestplate": "§3Reine Mana Brustplatte",
+      "item.hk400test.mana_armor_helmet": "§3Reiner Mana Helm",
       "entity.hk400test.test": "Some-Mount",
       "item.hk400test.creativetab": "Icon",
-      "advancements.some_advancement.title": "Stachelig",
       "block.hk400test.town_model": "Stadt Model"
     }
   },

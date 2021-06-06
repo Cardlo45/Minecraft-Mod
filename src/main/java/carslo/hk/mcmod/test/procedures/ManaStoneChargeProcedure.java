@@ -18,7 +18,7 @@ import carslo.hk.mcmod.test.Hk400testMod;
 @Hk400testModElements.ModElement.Tag
 public class ManaStoneChargeProcedure extends Hk400testModElements.ModElement {
 	public ManaStoneChargeProcedure(Hk400testModElements instance) {
-		super(instance, 47);
+		super(instance, 38);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -12,7 +12,7 @@ import carslo.hk.mcmod.test.Hk400testMod;
 @Hk400testModElements.ModElement.Tag
 public class GmCreativeProcedure extends Hk400testModElements.ModElement {
 	public GmCreativeProcedure(Hk400testModElements instance) {
-		super(instance, 28);
+		super(instance, 19);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

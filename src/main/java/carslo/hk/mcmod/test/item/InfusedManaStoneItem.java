@@ -22,7 +22,7 @@ public class InfusedManaStoneItem extends Hk400testModElements.ModElement {
 	@ObjectHolder("hk400test:infused_mana_stone")
 	public static final Item block = null;
 	public InfusedManaStoneItem(Hk400testModElements instance) {
-		super(instance, 1);
+		super(instance, 6);
 	}
 
 	@Override

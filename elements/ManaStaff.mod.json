@@ -5,9 +5,9 @@
     "renderType": 0,
     "texture": "item_mana_staff",
     "customModelName": "Normal",
-    "name": "Mana Stab",
+    "name": "§3Mana Stab",
     "specialInfo": [
-      "Nutze §320Mana §rum einen §3Mana Ball §rzu erzeugen der §c10 Schaden §rmacht"
+      "Nutze §320 Mana §rum einen §3Mana Ball §rzu erzeugen der §c10 Schaden §rmacht"
     ],
     "creativeTab": {
       "value": "CUSTOM:OurItems"

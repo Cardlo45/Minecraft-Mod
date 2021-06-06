@@ -18,7 +18,7 @@ import carslo.hk.mcmod.test.Hk400testModElements;
 @Hk400testModElements.ModElement.Tag
 public class ManaDisplayOverlay extends Hk400testModElements.ModElement {
 	public ManaDisplayOverlay(Hk400testModElements instance) {
-		super(instance, 38);
+		super(instance, 29);
 	}
 
 	@Override

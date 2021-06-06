@@ -62,7 +62,7 @@ public class ManaSwordItem extends Hk400testModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletmana_sword").setRegistryName("entitybulletmana_sword");
 	public ManaSwordItem(Hk400testModElements instance) {
-		super(instance, 10);
+		super(instance, 3);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ManaSwordRenderer.ModelRegisterHandler());
 	}
 

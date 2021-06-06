@@ -1,6 +1,5 @@
 {
 	"credit": "Made by: Carslo_45",
-	"parent": "_mana_sword",
 	"textures": {
 		"0": "hk400test:items/item_mana_sword",
 		"particle": "hk400test:items/item_mana_sword"
