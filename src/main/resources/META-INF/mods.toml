@@ -4,11 +4,12 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="hk400test"
-version="0.0.1"
+version="0.0.3"
 displayName="Henkiller400 Co-Op Test"
 credits="ToDo: add credits"
 displayURL="https://weside-in/future.ok/?"
-authors="Carslo45, Henkiller400"
+logoFile="logo.png"
+authors="Carslo45, Henkiller400, Manfred"
 description='''
 ToDo: add Description
 '''
